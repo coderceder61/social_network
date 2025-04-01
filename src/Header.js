@@ -1948,10 +1948,10 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
       )}
       {!image2 && good4 && (
         <div style={{border:'1px solid rgb(200,200,200)',padding:'2px',margin:'30px 20px',width:'150px',height:'auto'}}>
-          <img onLoad={handleImageLoad} loading="lazy"
+          <img onLoad={handleImageLoad2} loading="lazy"
             src={`https://soc-net.info/api/${formData.image}`} 
             alt="Preview" 
-            style={{ opacity: isLoaded ? 1 : 0,transition: 'opacity 0.5s ease',maxWidth: '100%', height: 'auto' }} 
+            style={{ opacity: 0,transition: 'opacity 0.5s ease',maxWidth: '100%', height: 'auto' }} 
           />
         </div>
       )}
