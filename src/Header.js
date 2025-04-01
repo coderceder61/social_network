@@ -2043,7 +2043,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
             </div>
             <div style={{position:'relative',display:'flex',flexDirection:'column'}}>
             {res.data.response.id===item.id && <i id={`i_${item.id_post}`} onClick={toggleDelete} style={{marginRight:'10px',fontSize:'1em'}} className="fa-solid fa-ellipsis"></i>}
-            <div onClick={()=>deletePost(item.id_post)} id={`${item.id_post}`} style={{display:'none'}} className="dropdown-conten">
+            <div onClick={()=>deletePost(item.id_post)} id={`${item.id_post}`} className="dropdown-conten">
                     <div><i className="fa-solid fa-trash"></i><span id={`del_${item.id_post}`}>Delete Post</span></div>  
                 </div>
             </div>
