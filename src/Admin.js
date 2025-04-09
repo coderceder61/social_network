@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function Admin() {
+    const navigate = useNavigate();
+
   if(localStorage.getItem('isAdmin')!=="admin"){
     navigate('/'); // redirect to Home
   }
