@@ -1848,7 +1848,7 @@ upsd.current.style.display='none'
           
                 {!formData.image && <i ref={popup} id="profile" className="dropbtn fa-solid fa-user"></i>}
                 {true && <div ref={upsd} style={{display:'none'}} className="dropdown-content">
-                    <div ref={upps} onClick={() => {setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link to=`https://social-network-fawn-one.vercel.app/profile?username=${formData.username}`>My Profile</Link></div>               
+                    <div ref={upps} onClick={() => {setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link to={`https://social-network-fawn-one.vercel.app/profile?username=${formData.username}`}>My Profile</Link></div>               
                     <div ref={ups}  onClick={() => {setProfile2(!profile2);setEditTrue(!edit)}}><i className="fa-solid fa-pen-to-square"></i>Edit Profile</div>
                     <hr/>
                     <Link ref={log} style={{color:'black'}} to='/'><div><i className="fa-solid fa-right-from-bracket"></i>Logout</div></Link>
