@@ -14,7 +14,6 @@ function Admin() {
   const handleImageLoad = () => {
     setIsLoaded(true);
   };
-  const navigate = useNavigate();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
