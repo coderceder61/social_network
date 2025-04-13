@@ -22,16 +22,17 @@ let checkNewComment = []
 let rresponses = null
 
 function Profile() {
-    useEffect(() => {
-  console.log("flagg changed:", flagg);
-}, [flagg]);
+   
     
     const [flag,setFlag] = useState(false)
+    
   let [username, setUsername] = useState("");
   let [username2, setUsername2] = useState("");
   let [resc,setResc] = useState(null)
   let [flagg,setFlagg] = useState(true)
-
+ useEffect(() => {
+  console.log("flagg changed:", flagg);
+}, [flagg]);
     const [notig, setNotig] = useState(null);
     let [newMessagess, setNewMessagess] = useState([]);
             const [newMessagefs, setNewMessageffs] = useState(null);
