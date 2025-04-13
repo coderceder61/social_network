@@ -1533,7 +1533,7 @@ const getUserDataak = async (username) => {
               upsd.current.style.display='none'
               setEditTrue(true)
               setEdtTrue(!edt)
-                                 setFlagg(true)
+                                 setFlagg(false)
               // setProfile(false)
               setProfile2(false);
             }else {
@@ -1569,7 +1569,7 @@ upsd.current.style.display='none'
               upsd.current.style.display='none'
               setEditTrue(true)
               setEdtTrue(!edt)
-                                 setFlagg(true)
+                                 setFlagg(false)
               // setProfile(false)
               setProfile2(false);
             }else {
@@ -1602,7 +1602,7 @@ upsd.current.style.display='none'
             if(event.target===ups.current){
               upsd.current.style.display='none'
               setEditTrue(true)
-                  setFlagg(true)
+                  setFlagg(false)
               setEdtTrue(!edt)
               // setProfile(false)
               setProfile2(false);
