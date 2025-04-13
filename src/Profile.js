@@ -890,7 +890,7 @@ const getUserDataak = async (username) => {
       }
     };
     const handleFileChange2 = (event) => {
-      setProfile(!profile)
+      //setProfile(!profile)
       // setFile2(event.target.files[0]);
       const file2 = event.target.files[0];
       setFormData(prevState => ({
