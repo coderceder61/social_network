@@ -1533,6 +1533,7 @@ const getUserDataak = async (username) => {
               upsd.current.style.display='none'
               setEditTrue(true)
               setEdtTrue(!edt)
+                                 setFlagg(true)
               // setProfile(false)
               setProfile2(false);
             }else {
@@ -1542,6 +1543,7 @@ const getUserDataak = async (username) => {
                   setProfile(true)
                   setEditTrue(false)
                   setEdtTrue(false)
+                                     setFlagg(true)
                   upsd.current.style.display='none'
                 }
               }
@@ -1567,6 +1569,7 @@ upsd.current.style.display='none'
               upsd.current.style.display='none'
               setEditTrue(true)
               setEdtTrue(!edt)
+                                 setFlagg(true)
               // setProfile(false)
               setProfile2(false);
             }else {
@@ -1574,7 +1577,7 @@ upsd.current.style.display='none'
                 if(event.target===upps.current ){
                   setProfile2(false)
                   setProfile(true)
-
+                  setFlagg(true)
                   setEditTrue(false)
                   setEdtTrue(false)
                   upsd.current.style.display='none'
@@ -1599,7 +1602,7 @@ upsd.current.style.display='none'
             if(event.target===ups.current){
               upsd.current.style.display='none'
               setEditTrue(true)
-
+                  setFlagg(true)
               setEdtTrue(!edt)
               // setProfile(false)
               setProfile2(false);
@@ -1608,7 +1611,7 @@ upsd.current.style.display='none'
                 if(event.target===upps.current ){
                   setProfile2(false)
                   setProfile(true)
-
+                  setFlagg(true)
                   setEditTrue(false)
                   setEdtTrue(false)
                   upsd.current.style.display='none'
