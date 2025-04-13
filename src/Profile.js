@@ -39,7 +39,7 @@ function Profile() {
      const handleImageLoad2 = (e) => {
     // setIsLoaded(true);
     e.target.style.opacity = 1;
-    console.log(e.target)
+    //console.log(e.target)
   };
 const getUserDataak = async (username) => {
   let resp
@@ -194,7 +194,7 @@ const getUserDataak = async (username) => {
         const notgp = await axios.post('https://soc-net.info/api/getMessages.php', data, {
           headers: { 'Content-Type': 'application/json' }
         });
-        console.log(notgp.data)
+        //console.log(notgp.data)
         setNotgp(notgp.data);
       } catch (error) {
         console.error('Error:', error);
@@ -237,7 +237,7 @@ const getUserDataak = async (username) => {
           'Content-Type': 'application/json',
         },
       });
-      console.log(res)
+     // console.log(res)
       setFormDataa(prevState => ({
         ...prevState,
         older: res.data.response.image
@@ -446,7 +446,7 @@ const getUserDataak = async (username) => {
     }
    useEffect(() => {
         if (notig !== null) {
-          console.log('Updated notifications:', notig);
+          //console.log('Updated notifications:', notig);
         }
       }, [notig]); // This will run every time notig state is updated
     const closeBtnSidenave2 = useRef(null);
@@ -778,7 +778,7 @@ const getUserDataak = async (username) => {
             'Content-Type': 'application/json',
           },
         });
-        console.log(rs)
+        //console.log(rs)
         setFormData(prevState => ({
           ...prevState,
           older: rs.data.image
@@ -1693,20 +1693,20 @@ upsd.current.style.display='none'
         }
         const fetch = async () => {
           try {
-          console.log(data)
+          //console.log(data)
               
             let newMessagess2 = await axios.post('https://soc-net.info/api/checkNewMessage3.php', data, {
               headers: {
                 'Content-Type': 'application/json',
               },
             });
-            console.log(newMessagess2)
+            //console.log(newMessagess2)
             newMessagess = newMessagess2.data
             if (newMessagess) {
-              console.log(newMessagess)
+              //console.log(newMessagess)
               if (Array.isArray(newMessagess)) {
                 setNewMessagess(newMessagess); // Update state properly
-                  console.log(newMessagess)
+                  //console.log(newMessagess)
                 setLoader2(false);  // Correctly update loader state
               } else {
                 console.error('Response data is empty or not an array:', newMessagess2.data);
@@ -1769,7 +1769,7 @@ upsd.current.style.display='none'
             headers: { 'Content-Type': 'application/json' }
           });
   
-          console.log('Notifications response:', notigp.data);
+         // console.log('Notifications response:', notigp.data);
   
           // Set notifications state
           setNotig(notigp.data);
@@ -1853,7 +1853,7 @@ upsd.current.style.display='none'
             style={{ marginLeft:'7px',marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'35px',verticalAlign:'middle',borderRadius:'50%'}} 
           />}
 
-            {image2 && <img onLoad={handleImageLoad2} onLoad={handleImageLoad2} loading="lazy"
+            {image2 && <img onLoad={handleImageLoad2} loading="lazy"
               src={image2} 
               ref={popup90}
               alt="Preview" 
