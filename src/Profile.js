@@ -32,7 +32,8 @@ function Profile() {
   let [flagg,setFlagg] = useState(true)
  useEffect(() => {
   console.log("flagg changed:", flagg);
-}, [flagg]);
+  console.log("image2 changed:", image2);
+}, [flagg,image2]);
     const [notig, setNotig] = useState(null);
     let [newMessagess, setNewMessagess] = useState([]);
             const [newMessagefs, setNewMessageffs] = useState(null);
