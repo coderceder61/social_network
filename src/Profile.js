@@ -26,7 +26,9 @@ function Profile() {
   let [username, setUsername] = useState("");
   let [username2, setUsername2] = useState("");
   let [resc,setResc] = useState(null)
-  const [notig, setNotig] = useState(null);
+  let [flagg,setFlagg] = useState(true)
+
+    const [notig, setNotig] = useState(null);
     let [newMessagess, setNewMessagess] = useState([]);
             const [newMessagefs, setNewMessageffs] = useState(null);
      const handleImageLoad2 = (e) => {
@@ -1848,11 +1850,11 @@ upsd.current.style.display='none'
           
                 {!formData.image && <i ref={popup} id="profile" className="dropbtn fa-solid fa-user"></i>}
                 {true && <div ref={upsd} style={{display:'none'}} className="dropdown-content">
-                    <div ref={upps} onClick={() => {setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
+                    <div ref={upps} onClick={() => {setFlagg(true);setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
     textDecoration: 'none',
     color: '#000',
   }} to={`https://social-network-fawn-one.vercel.app/profile?username=${formData.username}`}>My Profile</Link></div>               
-                    <div ref={ups}  onClick={() => {setProfile2(!profile2);setEditTrue(!edit)}}><i className="fa-solid fa-pen-to-square"></i>Edit Profile</div>
+                    <div ref={ups}  onClick={() => {setFlagg(false);setProfile2(!profile2);setEditTrue(!edit)}}><i className="fa-solid fa-pen-to-square"></i>Edit Profile</div>
                     <hr/>
                     <Link ref={log} style={{color:'black'}} to='/'><div><i className="fa-solid fa-right-from-bracket"></i>Logout</div></Link>
                 </div>}
@@ -2312,7 +2314,7 @@ upsd.current.style.display='none'
   </div>
   </div>}
 
-  {<div style={{textAlign:'center',marginBottom:'20px'}}>
+  {flagg && <div style={{textAlign:'center',marginBottom:'20px'}}>
         <h1 style={{marginBottom:'10px'}}>Posts</h1>
         {(res && (res.data.response.blocked2!==0 || res.data.response.blocked!==0)) ? <p style={{width:'70%',margin:'auto',padding:'15px',backgroundColor:'rgba(0,0,0,0.2)'}}><i style={{marginRight:'10px',color:'#FFF',borderRadius:'50%',padding:'10px',backgroundColor:'rgba(0,0,0,0.7)'}} className="fa-solid fa-x"></i>You are not allowed to see posts !</p> :
         <div style={{textAlign:'center',display:'flex',justifyContent:'center',flexWrap:'wrap',width:'70%',margin:'auto'}}>
