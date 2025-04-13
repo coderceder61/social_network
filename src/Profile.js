@@ -1530,7 +1530,6 @@ const getUserDataak = async (username) => {
           }
           if(popup90.current && event.target!==popup90.current && event.target!==popup.current && upsd.current){
             if(event.target===ups.current){
-               setFlagg(false)
               upsd.current.style.display='none'
               setEditTrue(true)
               setEdtTrue(!edt)
@@ -1565,7 +1564,6 @@ upsd.current.style.display='none'
           }
           if(popup4.current && event.target!==popup4.current && event.target!==popup.current && upsd.current){
             if(event.target===ups.current){
-                              setFlagg(false)
 
               upsd.current.style.display='none'
               setEditTrue(true)
@@ -1603,7 +1601,6 @@ upsd.current.style.display='none'
             if(event.target===ups.current){
               upsd.current.style.display='none'
               setEditTrue(true)
-                              setFlagg(false)
 
               setEdtTrue(!edt)
               // setProfile(false)
