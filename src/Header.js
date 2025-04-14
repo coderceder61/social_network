@@ -1025,7 +1025,7 @@ function Header() {
         }
     }
     const handleUpdate = async () => {
-      
+      console.log(formData)
       setGood1(false)
       setGood2(false)
       setGood33(false)
