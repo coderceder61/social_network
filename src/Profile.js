@@ -898,8 +898,8 @@ const getUserDataak = async (username) => {
       }
     
       // Set state for profile and form data
-      setProfile(true);
-      setFile2(file); // Update the file state
+      //setProfile(true);
+      //setFile2(file); // Update the file state
     
       setFormData(prevState => ({
         ...prevState,
