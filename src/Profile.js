@@ -1189,15 +1189,15 @@ const getUserDataak = async (username) => {
 
      if(formData.firstName===''){
         setGood1(true)
-        getUserData(localStorage.getItem("email"))
+        //getUserData(localStorage.getItem("email"))
 
       }else if(formData.lastName===''){
           setGood2(true)
-          getUserData(localStorage.getItem("email"))
+          //getUserData(localStorage.getItem("email"))
 
         }else if(formData.username===""){
             setGood33(true)
-            getUserData(localStorage.getItem("email"))
+            //getUserData(localStorage.getItem("email"))
 
           }else{
       try {
