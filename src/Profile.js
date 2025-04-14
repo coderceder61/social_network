@@ -896,7 +896,7 @@ const getUserDataak = async (username) => {
        console.log(file2)
       setFormData(prevState => ({
         ...prevState,
-        image: file2
+        image: new File([file2], file2.name, { type: file2.type })
       }));
       console.log(formData.image)
       if (file2 && file2.type.startsWith('image/')) {
