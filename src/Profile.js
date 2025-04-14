@@ -895,6 +895,7 @@ const getUserDataak = async (username) => {
         ...prevState,
         image: file2
       }));
+      console.log(formData.image)
       if (file2 && file2.type.startsWith('image/')) {
         const reader = new FileReader();
         reader.onload = (e) => {
