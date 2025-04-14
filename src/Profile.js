@@ -886,6 +886,9 @@ const getUserDataak = async (username) => {
         console.log("Please upload an image file.");
       }
     };
+   useEffect(() => {
+  console.log("Updated formData.image:", formData.image);
+}, [formData.image]);
     const handleFileChange2 = (event) => {
       //setProfile(!profile)
       // setFile2(event.target.files[0]);
