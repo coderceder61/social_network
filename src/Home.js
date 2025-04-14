@@ -8,6 +8,11 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   localStorage.removeItem("email");
+  if(localStorage.getItem('isAdmin')==='admin'){
+    localStorage.removeItem('isAdmin');
+  }
+  
+
   const [formData, setFormData] = useState({
       username:'',
       password:''
