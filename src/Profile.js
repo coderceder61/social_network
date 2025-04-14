@@ -97,7 +97,7 @@ const getUserDataak = async (username) => {
     
     if(resp.data.response.image){
       setGood4(true)
-      setImage2(false)
+      //setImage2(false)
     }
     
     setFormData(prevState => ({
