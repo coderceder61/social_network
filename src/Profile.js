@@ -108,7 +108,7 @@ const getUserDataak = async (username) => {
       lastName: resp.data.response.last_name,
       username: resp.data.response.username,
       id:resp.data.response.id,
-      image:resp.data.response.image
+      //image:resp.data.response.image
     }));
   } catch (error) {
     console.error('Error:', error);
