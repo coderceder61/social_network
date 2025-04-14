@@ -872,10 +872,7 @@ const getUserDataak = async (username) => {
       localStorage.setItem("email", location.state.email);
     const [image, setImage] = useState(null);
     const [image2, setImage2] = useState(null);
-    useEffect(() => {
-  console.log("flagg changed:", flagg);
-  console.log("image2 changed:", image2);
-}, [flagg,image2]);
+    
     const handleFileChange = (event) => {
       setFile(event.target.files[0]);
       const file = event.target.files[0];
