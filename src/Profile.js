@@ -97,7 +97,7 @@ const getUserDataak = async (username) => {
     
     if(resp.data.response.image){
       setGood4(true)
-      //setImage2(false)
+      setImage2(false)
     }
     
     setFormData(prevState => ({
@@ -279,7 +279,7 @@ const getUserDataak = async (username) => {
       
       if(res.data.image){
         setGood4(true)
-        //setImage2(false)
+        setImage2(false)
       }
       
       setFormDataa(prevState => ({
@@ -350,7 +350,7 @@ const getUserDataak = async (username) => {
       
       if(fafa.data.image){
         setGood4(true)
-        //setImage2(false)
+        setImage2(false)
       }
           setResc(fafa)
 
@@ -817,7 +817,7 @@ const getUserDataak = async (username) => {
         
         if(rs.data.response.image){
           setGood4(true)
-          //setImage2(false)
+          setImage2(false)
         }
         // console.log(rs)
         setFormData(prevState => ({
