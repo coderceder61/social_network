@@ -322,7 +322,7 @@ nav i{
   }
 
   .post,.postp{
-    width:330px;
+    /*width:330px;*/
     margin: auto;
     border-radius: 5px;
     padding: 20px;
