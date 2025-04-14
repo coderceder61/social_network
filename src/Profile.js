@@ -890,6 +890,7 @@ const getUserDataak = async (username) => {
       //setProfile(!profile)
       // setFile2(event.target.files[0]);
       const file2 = event.target.files[0];
+       console.log(file2)
       setFormData(prevState => ({
         ...prevState,
         image: file2
