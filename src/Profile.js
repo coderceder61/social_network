@@ -2109,7 +2109,7 @@ upsd.current.style.display='none'
   </div>}
 
   {followers && <div className='all'>
-  <div ref={popup234} className="postp">
+  <div ref={popup234} style={{width:"300px"}} className="postp">
     <div style={{marginBottom:'20px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
       <h3>Followers</h3>
       <i id="close" onClick={closePost23} className="fa-solid fa-x"></i>
@@ -2161,7 +2161,7 @@ upsd.current.style.display='none'
   </div>}
 
   {following && <div className='all'>
-  <div ref={popup2344} className="postp">
+  <div ref={popup2344} style={{width:"300px"}} className="postp">
     <div style={{marginBottom:'20px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
       <h3>Following</h3>
       <i id="close" onClick={closePost234} className="fa-solid fa-x"></i>
@@ -2218,7 +2218,7 @@ upsd.current.style.display='none'
 
 
   {followers2 && <div className='all'>
-  <div ref={popup2342} className="postp">
+  <div ref={popup2342} style={{width:"300px"}} className="postp">
     <div style={{marginBottom:'20px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
       <h3>Followers</h3>
       <i id="close" onClick={closePost232} className="fa-solid fa-x"></i>
@@ -2272,7 +2272,7 @@ upsd.current.style.display='none'
   </div>}
 
   {following2 && <div className='all'>
-  <div ref={popup23442} className="postp">
+  <div ref={popup23442} style={{width:"300px"}} className="postp">
     <div style={{marginBottom:'20px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
       <h3>Following</h3>
       <i id="close" onClick={closePost2342} className="fa-solid fa-x"></i>
