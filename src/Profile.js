@@ -890,23 +890,32 @@ const getUserDataak = async (username) => {
   console.log("Updated formData.image:", formData.image);
 }, [formData.image]);
     const handleFileChange2 = (event) => {
-      //setProfile(!profile)
-      // setFile2(event.target.files[0]);
-      const file2 = event.target.files[0];
-       console.log(file2)
+      const file = event.target.files[0]; // Access the selected file directly
+      setImage2(null)
+      if (!file) {
+        console.log("No file selected.");
+        return; // Early exit if no file selected
+      }
+    
+      // Set state for profile and form data
+      setProfile(true);
+      setFile2(file); // Update the file state
+    
       setFormData(prevState => ({
         ...prevState,
-        image: new File([file2], file2.name, { type: file2.type })
+        image: file
       }));
-      console.log(formData.image)
-      if (file2 && file2.type.startsWith('image/')) {
+    
+      // Check if the selected file is an image
+      if (file.type.startsWith('image/')) {
         const reader = new FileReader();
         reader.onload = (e) => {
-          setImage2(e.target.result); 
+          setImage2(e.target.result); // Set the image source for preview
         };
-        reader.readAsDataURL(file2);
+        reader.readAsDataURL(file);
       } else {
         console.log("Please upload an image file.");
+        // Optionally, you could also set an error state here for UI feedback.
       }
     };
     const [vis,setVis] = useState(false)
