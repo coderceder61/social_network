@@ -1243,7 +1243,7 @@ const getUserDataak = async (username) => {
 
       const handleClickOutside = (event) => {
         let commentsBox = document.querySelectorAll('.allp') 
-         
+         console.log(event.target)
         commentsBox.forEach((element) => {
           // console.log(element,)
           if(element.style.display == 'flex' && event.target.parentElement.parentElement.parentElement!==element && event.target.parentElement.parentElement.parentElement.parentElement!==element && event.target.tagName !== 'SPAN'){
