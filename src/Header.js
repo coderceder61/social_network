@@ -845,7 +845,7 @@ function Header() {
       }
     };
     const handleFileChange2 = (event) => {
-      console.log(edit,!profile2,profile);
+      console.log(!edit,!profile2,profile);
       const file = event.target.files[0]; // Access the selected file directly
       setImage2(null)
       if (!file) {
