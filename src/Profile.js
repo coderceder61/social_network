@@ -1619,7 +1619,7 @@ upsd.current.style.display='none'
                 }
               }
             }
-          }
+          }else{
             if(event.target===popup.current){
                console.log(1)
               if(upsd.current.style.display==='none'){
@@ -1634,7 +1634,7 @@ setVisible(false)
 upsd.current.style.display='none'
 }
             }
-          
+          }
           if(!closeBtnSidenave1.current.contains(event.target) && sidenave1.current.contains(event.target)){
             openNav1()
           }
