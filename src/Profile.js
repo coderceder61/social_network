@@ -2022,16 +2022,16 @@ upsd.current.style.display='none'
     {!edit && !profile2 && profile && <div id="kol">
       <div id="pol">
 
-      {formDataa.imagea && (<img onLoad={handleImageLoad2} loading="lazy"
+      {formDataa.usernamea§!==username && formDataa.imagea && (<img onLoad={handleImageLoad2} loading="lazy"
             src={`https://soc-net.info/api/${formDataa.imagea}`} 
             alt="Preview" 
             id="image30" 
           />)}
-{/*{image2 && (<img onLoad={handleImageLoad2} loading="lazy"
+      {formDataa.usernamea===username && image2 && (<img onLoad={handleImageLoad2} loading="lazy"
             src={image2} 
             alt="Preview" 
             id="image30" 
-          />)}*/}
+          />)}
           {!formDataa.imagea && <i id="profile30" style={{marginRight:'15px'}} className="dropbtn fa-solid fa-user"></i>}
         <div id="alg">
           <div style={{display:'flex',width:'100%',justifyContent:'space-between',alignItems:'center'}}><span style={{fontSize:'2em'}}>{formDataa.firstNamea} {formDataa.lastNamea}</span>
