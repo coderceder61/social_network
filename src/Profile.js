@@ -1245,13 +1245,13 @@ const getUserDataak = async (username) => {
         let commentsBox = document.querySelectorAll('.allp') 
          if(event.target===popup.current){
                console.log(1)
-              if(upsd.current.style.display==='none'){
+              if(upsd.current && upsd.current.style.display==='none'){
 upsd.current.style.display='block'
-setVisible(true)
+//setVisible(true)
                console.log(2)
                  
 }else{
-setVisible(false)
+//setVisible(false)
                console.log(3)
 
 upsd.current.style.display='none'
