@@ -1621,18 +1621,11 @@ upsd.current.style.display='none'
             }
           }else{
             if(event.target===popup.current){
-               console.log(1)
               if(upsd.current.style.display==='none'){
-upsd.current.style.display='block'
-setVisible(true)
-               console.log(2)
-                 
-}else{
-setVisible(false)
-               console.log(3)
-
-upsd.current.style.display='none'
-}
+                  upsd.current.style.display='block'                 
+               }else{
+                  upsd.current.style.display='none'
+               }
             }
           }
          
@@ -1867,7 +1860,7 @@ upsd.current.style.display='none'
             />}
           
                 {!formData.image && <i ref={popup} id="profile" className="dropbtn fa-solid fa-user"></i>}
-                {visible && <div ref={upsd} style={{display:'none'}} className="dropdown-content">
+                <div ref={upsd} style={{display:'none'}} className="dropdown-content">
                     <div ref={upps} onClick={() => {setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
     textDecoration: 'none',
     color: '#000',
@@ -1875,7 +1868,7 @@ upsd.current.style.display='none'
                     <div ref={ups}  onClick={() => {setProfile2(!profile2);setEditTrue(!edit)}}><i className="fa-solid fa-pen-to-square"></i>Edit Profile</div>
                     <hr/>
                     <Link ref={log} style={{color:'black'}} to='/'><div><i className="fa-solid fa-right-from-bracket"></i>Logout</div></Link>
-                </div>}
+                </div>
             </div>
 
         </nav>
