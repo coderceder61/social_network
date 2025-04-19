@@ -27,6 +27,8 @@ function Profile() {
     const [flag,setFlag] = useState(false)
     
   let [username, setUsername] = useState("");
+  let [f, setF] = useState(true);
+
   let [username2, setUsername2] = useState("");
   let [resc,setResc] = useState(null)
   let [flagg,setFlagg] = useState(true)
@@ -1863,7 +1865,7 @@ upsd.current.style.display='none'
           
                 {!formData.image && <i ref={popup56} id="profile" className="dropbtn fa-solid fa-user"></i>}
                 <div ref={upsd} style={{display:'none'}} className="dropdown-content">
-                    <div ref={upps} onClick={() => {setGood4(true);setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
+                    <div ref={upps} onClick={() => {setGood4(true);setF(false);setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
     textDecoration: 'none',
     color: '#000',
   }} to={`https://social-network-fawn-one.vercel.app/profile?username=${formData.username}`}>My Profile</Link></div>               
@@ -2020,7 +2022,7 @@ upsd.current.style.display='none'
     {!edit && !profile2 && profile && <div id="kol">
       <div id="pol">
 
-      {!image2 && formDataa.imagea && (<img onLoad={handleImageLoad2} loading="lazy"
+      {f && !image2 && formDataa.imagea && (<img onLoad={handleImageLoad2} loading="lazy"
             src={`https://soc-net.info/api/${formDataa.imagea}`} 
             alt="Preview" 
             id="image30" 
