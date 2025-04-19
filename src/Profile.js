@@ -1243,7 +1243,7 @@ const getUserDataak = async (username) => {
 
       const handleClickOutside = (event) => {
         let commentsBox = document.querySelectorAll('.allp') 
-         console.log(event.target==popup.current,popup.current,event.target)
+         console.log(event.target==popup56.current,popup56.current,event.target)
         commentsBox.forEach((element) => {
           // console.log(element,)
           if(element.style.display == 'flex' && event.target.parentElement.parentElement.parentElement!==element && event.target.parentElement.parentElement.parentElement.parentElement!==element && event.target.tagName !== 'SPAN'){
@@ -1350,17 +1350,17 @@ const getUserDataak = async (username) => {
           if(popup90.current && popup90.current!==event.target && popup2345.current && !popup2345.current.contains(event.target))
             upsd.current.style.display='none'
 
-          if(popup.current && popup.current!==event.target && popup23.current && !popup23.current.contains(event.target))
+          if(popup56.current && popup56.current!==event.target && popup23.current && !popup23.current.contains(event.target))
             {setLoader2(true);setLoader(true);upsd.current.style.display='none';}
-          if(popup.current && popup.current!==event.target && popup234.current && !popup234.current.contains(event.target))
+          if(popup56.current && popup56.current!==event.target && popup234.current && !popup234.current.contains(event.target))
             upsd.current.style.display='none'
-          if(popup.current && popup.current!==event.target && popup2344.current && !popup2344.current.contains(event.target))
+          if(popup56.current && popup56.current!==event.target && popup2344.current && !popup2344.current.contains(event.target))
             upsd.current.style.display='none'
-          if(popup.current && popup.current!==event.target && popup2342.current && !popup2342.current.contains(event.target))
+          if(popup56.current && popup56.current!==event.target && popup2342.current && !popup2342.current.contains(event.target))
             upsd.current.style.display='none'
-          if(popup.current && popup.current!==event.target && popup23442.current && !popup23442.current.contains(event.target))
+          if(popup56.current && popup56.current!==event.target && popup23442.current && !popup23442.current.contains(event.target))
             upsd.current.style.display='none'
-          if(popup.current && popup.current!==event.target && popup2345.current && !popup2345.current.contains(event.target))
+          if(popup56.current && popup56.current!==event.target && popup2345.current && !popup2345.current.contains(event.target))
             upsd.current.style.display='none'
         }
           if (sidenave1.current  && !sidenave1.current.contains(event.target)) {
@@ -1374,7 +1374,7 @@ const getUserDataak = async (username) => {
             upsd.current.style.display='none'
           if(popup90.current && popup90.current!==event.target && popup2.current && !popup2.current.contains(event.target))
             upsd.current.style.display='none'
-          if(popup.current && popup.current!==event.target && popup2.current && !popup2.current.contains(event.target))
+          if(popup56.current && popup56.current!==event.target && popup2.current && !popup2.current.contains(event.target))
             upsd.current.style.display='none'
         }
         if (sidenave1.current  && !sidenave1.current.contains(event.target)) {
@@ -1416,17 +1416,17 @@ const getUserDataak = async (username) => {
         
         
         
-        if(popup.current && popup.current!==event.target && popup23.current && !popup23.current.contains(event.target))
+        if(popup56.current && popup56.current!==event.target && popup23.current && !popup23.current.contains(event.target))
           {setLoader2(true);setLoader(true);upsd.current.style.display='none';}
-        if(popup.current && popup.current!==event.target && popup234.current && !popup234.current.contains(event.target))
+        if(popup56.current && popup56.current!==event.target && popup234.current && !popup234.current.contains(event.target))
           upsd.current.style.display='none'
-        if(popup.current && popup.current!==event.target && popup2344.current && !popup2344.current.contains(event.target))
+        if(popup56.current && popup56.current!==event.target && popup2344.current && !popup2344.current.contains(event.target))
           upsd.current.style.display='none'
-        if(popup.current && popup.current!==event.target && popup2342.current && !popup2342.current.contains(event.target))
+        if(popup56.current && popup56.current!==event.target && popup2342.current && !popup2342.current.contains(event.target))
           upsd.current.style.display='none'
-        if(popup.current && popup.current!==event.target && popup23442.current && !popup23442.current.contains(event.target))
+        if(popup56.current && popup56.current!==event.target && popup23442.current && !popup23442.current.contains(event.target))
           upsd.current.style.display='none'
-        if(popup.current && popup.current!==event.target && popup2345.current && !popup2345.current.contains(event.target))
+        if(popup56.current && popup56.current!==event.target && popup2345.current && !popup2345.current.contains(event.target))
           upsd.current.style.display='none'
       }
           if (sidenave2.current && !sidenave2.current.contains(event.target)) {
@@ -1469,7 +1469,7 @@ const getUserDataak = async (username) => {
             setEdtTrue(!edt)
             upsd.current.style.display='none'
           }
-          if(popup.current && popup.current!==event.target && event.target===op.current){
+          if(popup56.current && popup56.current!==event.target && event.target===op.current){
             setProfile(!profile)
             setEditTrue(false)
             setEdtTrue(!edt)
@@ -1529,7 +1529,7 @@ const getUserDataak = async (username) => {
           if((popup90.current && popup90.current!==event.target && upsd.current && !upsd.current.contains(event.target)) ){
             upsd.current.style.display='none'
           }
-          if(popup90.current && event.target!==popup90.current && event.target!==popup.current && upsd.current){
+          if(popup90.current && event.target!==popup90.current && event.target!==popup56.current && upsd.current){
             if(event.target===ups.current){
               upsd.current.style.display='none'
               setEditTrue(true)
@@ -1564,7 +1564,7 @@ upsd.current.style.display='none'
           if((popup4.current && popup4.current!==event.target && upsd.current && !upsd.current.contains(event.target)) ){
             upsd.current.style.display='none'
           }
-          if(popup4.current && event.target!==popup4.current && event.target!==popup.current && upsd.current){
+          if(popup4.current && event.target!==popup4.current && event.target!==popup56.current && upsd.current){
             if(event.target===ups.current){
 
               upsd.current.style.display='none'
@@ -1596,10 +1596,10 @@ upsd.current.style.display='none'
 }
             }
           }
-          if((popup.current && popup.current!==event.target && upsd.current && !upsd.current.contains(event.target)) ){
+          if((popup56.current && popup56.current!==event.target && upsd.current && !upsd.current.contains(event.target)) ){
             upsd.current.style.display='none'
           }
-          if(popup.current && event.target!==popup4.current && event.target!==popup.current && upsd.current){
+          if(popup56.current && event.target!==popup4.current && event.target!==popup56.current && upsd.current){
             if(event.target===ups.current){
               upsd.current.style.display='none'
               setEditTrue(true)
@@ -1608,7 +1608,7 @@ upsd.current.style.display='none'
               // setProfile(false)
               setProfile2(false);
             }else {
-              if(popup.current && popup.current!==event.target && event.target!==log.current && !log.current.contains(event.target)){
+              if(popup56.current && popup56.current!==event.target && event.target!==log.current && !log.current.contains(event.target)){
                 if(event.target===upps.current ){
                   setProfile2(false)
                   setProfile(true)
@@ -1620,7 +1620,7 @@ upsd.current.style.display='none'
               }
             }
           }else{
-            if(event.target===popup.current){
+            if(event.target===popup56.current){
               if(upsd.current.style.display==='none'){
                   upsd.current.style.display='block'                 
                }else{
@@ -1859,7 +1859,7 @@ upsd.current.style.display='none'
               style={{marginLeft:'7px',marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'35px',verticalAlign:'middle',borderRadius:'50%'}} 
             />}
           
-                {!formData.image && <i ref={popup} id="profile" className="dropbtn fa-solid fa-user"></i>}
+                {!formData.image && <i ref={popup56} id="profile" className="dropbtn fa-solid fa-user"></i>}
                 <div ref={upsd} style={{display:'none'}} className="dropdown-content">
                     <div ref={upps} onClick={() => {setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
     textDecoration: 'none',
