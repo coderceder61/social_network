@@ -1865,7 +1865,7 @@ upsd.current.style.display='none'
           
                 {!formData.image && <i ref={popup56} id="profile" className="dropbtn fa-solid fa-user"></i>}
                 <div ref={upsd} style={{display:'none'}} className="dropdown-content">
-                    <div ref={upps} onClick={() => {setGood4(true);setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
+                    <div ref={upps} onClick={() => {setGood4(true);setFl(false);setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
     textDecoration: 'none',
     color: '#000',
   }} to={`https://social-network-fawn-one.vercel.app/profile?username=${formData.username}`}>My Profile</Link></div>               
@@ -2027,7 +2027,7 @@ upsd.current.style.display='none'
             alt="Preview" 
             id="image30" 
           />)}
-          {image2 && (<img onLoad={handleImageLoad2} loading="lazy"
+          {!formDataa.imagea && image2 && (<img onLoad={handleImageLoad2} loading="lazy"
             src={image2} 
             alt="Preview" 
             id="image30" 
