@@ -1636,7 +1636,7 @@ upsd.current.style.display='none'
             }
           }
          
-            }
+            
           if(!closeBtnSidenave1.current.contains(event.target) && sidenave1.current.contains(event.target)){
             openNav1()
           }
