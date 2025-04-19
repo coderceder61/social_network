@@ -1599,7 +1599,7 @@ upsd.current.style.display='none'
           if((popup.current && popup.current!==event.target && upsd.current && !upsd.current.contains(event.target)) ){
             upsd.current.style.display='none'
           }
-          if(popup.current && event.target!==popup.current && event.target!==popup.current && upsd.current){
+          if(popup.current && event.target!==popup4.current && event.target!==popup.current && upsd.current){
             if(event.target===ups.current){
               upsd.current.style.display='none'
               setEditTrue(true)
@@ -1621,7 +1621,7 @@ upsd.current.style.display='none'
             }
           }else{
             if(event.target===popup.current){
-              if(upsd.current.style.display=='none'){
+              if(upsd.current.style.display==='none'){
 upsd.current.style.display='block'
 
 }else{
