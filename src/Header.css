@@ -559,6 +559,8 @@ overflow-y: scroll;
 
   #section1{
 /*     text-align: center; */
+          flex-direction: column;
+
     width:100%;
   }
 }
