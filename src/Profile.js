@@ -887,7 +887,7 @@ const getUserDataak = async (username) => {
       }
     };
    useEffect(() => {
-  console.log("Updated formData.image:", formData.image);
+  //console.log("Updated formData.image:", formData.image);
 }, [formData.image]);
     const handleFileChange2 = (event) => {
     const file2 = event.target.files[0];
