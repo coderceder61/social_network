@@ -1243,7 +1243,19 @@ const getUserDataak = async (username) => {
 
       const handleClickOutside = (event) => {
         let commentsBox = document.querySelectorAll('.allp') 
-        
+         if(event.target===popup.current){
+               console.log(1)
+              if(upsd.current.style.display==='none'){
+upsd.current.style.display='block'
+setVisible(true)
+               console.log(2)
+                 
+}else{
+setVisible(false)
+               console.log(3)
+
+upsd.current.style.display='none'
+}
         commentsBox.forEach((element) => {
           // console.log(element,)
           if(element.style.display == 'flex' && event.target.parentElement.parentElement.parentElement!==element && event.target.parentElement.parentElement.parentElement.parentElement!==element && event.target.tagName !== 'SPAN'){
@@ -1635,6 +1647,8 @@ upsd.current.style.display='none'
 }
             }
           }
+         
+            }
           if(!closeBtnSidenave1.current.contains(event.target) && sidenave1.current.contains(event.target)){
             openNav1()
           }
