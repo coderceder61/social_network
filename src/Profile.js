@@ -1621,7 +1621,7 @@ upsd.current.style.display='none'
             }
           }else{
             if(event.target===popup.current){
-              if(upsd.current.style.display==='none'){
+              if(upsd.current.style.display=='none'){
 upsd.current.style.display='block'
 
 }else{
