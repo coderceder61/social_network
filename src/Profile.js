@@ -2022,12 +2022,12 @@ upsd.current.style.display='none'
     {!edit && !profile2 && profile && <div id="kol">
       <div id="pol">
 
-      {formDataa.usernamea!==username && formDataa.imagea && (<img onLoad={handleImageLoad2} loading="lazy"
+      {formDataa.imagea && (<img onLoad={handleImageLoad2} loading="lazy"
             src={`https://soc-net.info/api/${formDataa.imagea}`} 
             alt="Preview" 
             id="image30" 
           />)}
-      {formDataa.usernamea===username && image2 && (<img onLoad={handleImageLoad2} loading="lazy"
+      {image2 && (<img onLoad={handleImageLoad2} loading="lazy"
             src={image2} 
             alt="Preview" 
             id="image30" 
