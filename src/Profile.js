@@ -611,7 +611,7 @@ const getUserDataak = async (username) => {
     const [profile2,setProfile2] = useState(false)
     const [redss, setRedss] = useState(null);
 
-    // const [visible,setVisible] = useState(true)
+    const [visible,setVisible] = useState(true)
     const [edit,setEditTrue] = useState(false)
     const [edt,setEdtTrue] = useState(false)
 
@@ -1623,8 +1623,9 @@ upsd.current.style.display='none'
             if(event.target===popup.current){
               if(upsd.current.style.display==='none'){
 upsd.current.style.display='block'
-
+setVisible(true)
 }else{
+setVisible(false)
 
 upsd.current.style.display='none'
 }
@@ -1860,7 +1861,7 @@ upsd.current.style.display='none'
             />}
           
                 {!formData.image && <i ref={popup} id="profile" className="dropbtn fa-solid fa-user"></i>}
-                {true && <div ref={upsd} style={{display:'none'}} className="dropdown-content">
+                {visible && <div ref={upsd} style={{display:'none'}} className="dropdown-content">
                     <div ref={upps} onClick={() => {setUsername(formData.username);setProfile2(false);setProfile(true);setEdtTrue(false);}}><i className="fa-solid fa-address-book"></i><Link style={{
     textDecoration: 'none',
     color: '#000',
