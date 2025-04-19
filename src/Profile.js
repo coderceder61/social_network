@@ -1245,7 +1245,7 @@ const getUserDataak = async (username) => {
 
       const handleClickOutside = (event) => {
         let commentsBox = document.querySelectorAll('.allp') 
-         console.log(event.target==popup56.current,popup56.current,event.target)
+         //console.log(event.target==popup56.current,popup56.current,event.target)
         commentsBox.forEach((element) => {
           // console.log(element,)
           if(element.style.display == 'flex' && event.target.parentElement.parentElement.parentElement!==element && event.target.parentElement.parentElement.parentElement.parentElement!==element && event.target.tagName !== 'SPAN'){
