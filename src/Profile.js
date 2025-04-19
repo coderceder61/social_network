@@ -2027,11 +2027,11 @@ upsd.current.style.display='none'
             alt="Preview" 
             id="image30" 
           />)}
-          //{image2 && (<img onLoad={handleImageLoad2} loading="lazy"
-            //src={image2} 
-            //alt="Preview" 
-            //id="image30" 
-          ///>)}
+{/*{image2 && (<img onLoad={handleImageLoad2} loading="lazy"
+            src={image2} 
+            alt="Preview" 
+            id="image30" 
+          />)}*/}
           {!formDataa.imagea && <i id="profile30" style={{marginRight:'15px'}} className="dropbtn fa-solid fa-user"></i>}
         <div id="alg">
           <div style={{display:'flex',width:'100%',justifyContent:'space-between',alignItems:'center'}}><span style={{fontSize:'2em'}}>{formDataa.firstNamea} {formDataa.lastNamea}</span>
