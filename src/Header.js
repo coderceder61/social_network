@@ -845,6 +845,7 @@ function Header() {
       }
     };
     const handleFileChange2 = (event) => {
+      console.log(edit,!profile2,profile);
       const file = event.target.files[0]; // Access the selected file directly
       setImage2(null)
       if (!file) {
@@ -1849,7 +1850,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
             />}
                 {!formData.image && <i ref={popup4}  id="profile" className="dropbtn fa-solid fa-user"></i>}
                 {visible && <div ref={up} style={{display:'none'}} className="dropdown-content">
-                    <div ref={upps} onClick={() => {setProfile(true);setEdtTrue(false)}}><i className="fa-solid fa-address-book"></i>My Profile</div>               
+                    <div ref={upps} onClick={() => {console.log(edit,!profile2,profile);setProfile(true);setEdtTrue(false)}}><i className="fa-solid fa-address-book"></i>My Profile</div>               
                     <div ref={ups}  onClick={() => {setEditTrue(!edit)}}><i className="fa-solid fa-pen-to-square"></i>Edit Profile</div>
                     <hr/>
                     <Link ref={log} style={{color:'black'}} to='/'><div><i className="fa-solid fa-right-from-bracket"></i>Logout</div></Link>
