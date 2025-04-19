@@ -2027,7 +2027,7 @@ upsd.current.style.display='none'
             alt="Preview" 
             id="image30" 
           />)}
-      {image2 && (<img onLoad={handleImageLoad2} loading="lazy"
+      {formDataa.usernamea!==username && image2 && (<img onLoad={handleImageLoad2} loading="lazy"
             src={image2} 
             alt="Preview" 
             id="image30" 
