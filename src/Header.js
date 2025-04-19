@@ -38,7 +38,7 @@ function Header() {
   const handleImageLoad2 = (e) => {
     // setIsLoaded(true);
     e.target.style.opacity = 1;
-    console.log(e.target)
+    //console.log(e.target)
   };
   const [username, setUsername] = useState("");
   const [trigger, setTrigger] = useState(false);
@@ -111,9 +111,9 @@ function Header() {
               window.location.href = `#${newMessagess[newMessagess.length-1].id}`
             }
         } else if (mutation.type === 'attributes') {
-            console.log('Attributes changed');
+            //console.log('Attributes changed');
         } else if (mutation.type === 'characterData') {
-            console.log('Text content changed');
+            //console.log('Text content changed');
         }
     });
 });
@@ -239,7 +239,7 @@ function Header() {
           'Content-Type': 'application/json',
         },
       });
-      console.log(like)
+      //console.log(like)
       // if(like.data===1){
       //   window.location.href = `#comment_${id}`
       //   // window.location.reload();
@@ -286,7 +286,7 @@ function Header() {
           'Content-Type': 'application/json',
         },
       });
-      console.log(like)
+      //console.log(like)
       if(like.data===1){
         window.location.href = `?target=send_${id}`
         // console.log('df')
@@ -323,7 +323,7 @@ function Header() {
             'Content-Type': 'multipart/form-data',
           },
         });
-        console.log(responses)
+        //console.log(responses)
         if(responses.data.success)
         {
           window.location.reload(true);
@@ -391,11 +391,11 @@ function Header() {
     if(id){
      data = { id_suiveur:res.data.response.id,id_suivi:id }; 
     //  console.log(11)
-    console.log(data)
+    //console.log(data)
 
     }else{
     //  console.log(112)
-    console.log(data)
+    //console.log(data)
 
     data = { id_suiveur:res.response.data.id,id_suivi:res.data.response.id }; 
     }
@@ -405,7 +405,7 @@ function Header() {
           'Content-Type': 'application/json',
         },
       });
-      console.log(rds.data)
+      //console.log(rds.data)
       e.target.innerHTML = "<i className='fa-solid fa-check'></i> Unfollowed";
       e.target.style.opacity = '0.6'
       e.target.style.pointerEvents = 'none'
@@ -841,14 +841,14 @@ function Header() {
         };
         reader.readAsDataURL(file);
       } else {
-        console.log("Please upload an image file.");
+        //console.log("Please upload an image file.");
       }
     };
     const handleFileChange2 = (event) => {
       const file = event.target.files[0]; // Access the selected file directly
       setImage2(null)
       if (!file) {
-        console.log("No file selected.");
+        //console.log("No file selected.");
         return; // Early exit if no file selected
       }
     
@@ -869,7 +869,7 @@ function Header() {
         };
         reader.readAsDataURL(file);
       } else {
-        console.log("Please upload an image file.");
+        //console.log("Please upload an image file.");
         // Optionally, you could also set an error state here for UI feedback.
       }
     };
@@ -1025,7 +1025,7 @@ function Header() {
         }
     }
     const handleUpdate = async () => {
-      console.log(formData)
+      //console.log(formData)
       setGood1(false)
       setGood2(false)
       setGood33(false)
@@ -1146,13 +1146,13 @@ function Header() {
             const data = { 
               id: resl.data.response.id 
             };
-            console.log(data)
+            //console.log(data)
       
             // Fetch messages
             const notgp = await axios.post('https://soc-net.info/api/getMessages.php', data, {
               headers: { 'Content-Type': 'application/json' }
             });
-            console.log(notgp.data)
+            //console.log(notgp.data)
             setNotgp(notgp.data);
           } catch (error) {
             console.error('Error:', error);
@@ -1170,13 +1170,13 @@ function Header() {
             const data = { 
               id: resl.data.response.id 
             };
-            console.log(data)
+            //console.log(data)
       
             // Fetch new messages
             const notgp = await axios.post('https://soc-net.info/api/getMessages.php', data, {
               headers: { 'Content-Type': 'application/json' }
             });
-            console.log(notgp.data)
+            //console.log(notgp.data)
             setNotgp(notgp.data);
           } catch (error) {
             console.error('Error:', error);
@@ -1191,7 +1191,7 @@ function Header() {
       // Log notig when it changes
       useEffect(() => {
         if (notig !== null) {
-          console.log('Updated notifications:', notig);
+          //console.log('Updated notifications:', notig);
         }
       }, [notig]); // This will run every time notig state is updated
       useEffect(() => {
@@ -1642,9 +1642,9 @@ up.current.style.display='none'
                   'Content-Type': 'application/json',
                 },
               });
-            console.log(data)
+            //console.log(data)
 
-              console.log(rresponses)
+              //console.log(rresponses)
               if(rresponses.data.length>0)
                 {
                   rresponses.data.map((item,index)=>{
@@ -1684,7 +1684,7 @@ up.current.style.display='none'
   
   //     // Cleanup function (optional)
   //     return () => {
-  //       console.log('Component unmounted!');
+  //       //console.log('Component unmounted!');
   //     };
   //   }, [checkNewComments]);
   const closePost2 = ()=>{
