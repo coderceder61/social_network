@@ -1621,11 +1621,15 @@ upsd.current.style.display='none'
             }
           }else{
             if(event.target===popup.current){
+               console.log(1)
               if(upsd.current.style.display==='none'){
 upsd.current.style.display='block'
 setVisible(true)
+               console.log(2)
+                 
 }else{
 setVisible(false)
+               console.log(3)
 
 upsd.current.style.display='none'
 }
