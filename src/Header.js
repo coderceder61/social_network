@@ -1410,7 +1410,7 @@ function Header() {
       }else {
         if(popup90.current && popup90.current!=event.target && event.target!=log.current && !log.current.contains(event.target)){
           if(event.target==upps.current ){
-            setProfile2(true)
+            setProfile2(false)
             // setProfile(false)
 
             setEditTrue(false)
