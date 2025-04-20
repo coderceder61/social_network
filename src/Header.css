@@ -195,7 +195,7 @@ nav i{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
       #logo{
-          margin-left:0;
+          margin:auto;
       }
   }
 
