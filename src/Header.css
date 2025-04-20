@@ -196,6 +196,7 @@ nav i{
     .sidenav a {font-size: 18px;}
       #logo{
           margin:auto;
+          display:inline-block;
       }
   }
 
