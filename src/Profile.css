@@ -233,11 +233,7 @@ nav i{
     padding: 16px;
   }
   
-  @media screen and (max-width: 860px) {
-      #logo{
-          margin:auto;
-          display:inline-block;
-      }
+  @media screen and (max-height: 860px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
@@ -598,6 +594,10 @@ button.unblock{
     width:45%;
 }
 @media only screen and (max-width: 860px) {
+    
+      #logo{
+          margin-left:0;
+      }
     #lastName,#firstName{
         width:90%;
     }
