@@ -236,6 +236,7 @@ nav i{
   @media screen and (max-height: 860px) {
       #logo{
           margin:auto;
+          display:inline-block;
       }
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
