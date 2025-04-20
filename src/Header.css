@@ -194,6 +194,9 @@ nav i{
   @media screen and (max-height: 860px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+      #logo{
+          margin-left:0;
+      }
   }
 
   h1{
