@@ -191,12 +191,11 @@ nav i{
     padding: 16px;
   }
   
-  @media screen and (max-height: 860px) {
+  @media screen and (max-width: 860px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
       #logo{
           margin:auto;
-          display:inline-block;
       }
   }
 
