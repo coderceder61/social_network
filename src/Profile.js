@@ -918,9 +918,10 @@ const getUserDataak = async (username) => {
     const opened = {
         width: '350px',
         opacity: '1',
-        position:'absolute',
+        position:'fixed',
         zIndex:'100',
-
+         top:'0',
+       bottom:'0',
       };
       const closed = {
         width: '0px',
