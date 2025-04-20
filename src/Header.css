@@ -191,12 +191,9 @@ nav i{
     padding: 16px;
   }
   
-  @media screen and (max-width: 860px) {
+  @media screen and (max-height: 860px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-      #logo{
-          margin:auto;
-      }
   }
 
   h1{
@@ -504,6 +501,9 @@ button.unfollo{
     #lastName,#firstName{
         width:90%;
     }
+     #logo{
+          margin-left:0;
+      }
     .dropdown-conten{
         right:5px;
     }
