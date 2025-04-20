@@ -2588,7 +2588,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
          {!edit && profile && <div style={{textAlign:'center',marginBottom:'20px'}}>
         <h1 style={{marginBottom:'10px'}}>Posts</h1>
         {/* {redss!==null && redss.length===0 && } */}
-        <div style={{textAlign:'center',justifyContent:"center",display:'flex',flexWrap:'wrap',width:'70%',margin:'auto'}}>
+        <div style={{textAlign:'center',justifyContent:"center",display:'flex',flexWrap:'wrap',width:'90%',margin:'auto'}}>
         {redss!==null && redss.length!=0 ? redss.map((item, index) => {
       return (
           <div id={`sen_${item.id_post}`} className="edcctp" key={index}>
