@@ -1085,7 +1085,7 @@ function Header() {
           (async () => {
             const data = { email: localStorage.getItem("email"),id:res.data.response.id };
             try {
-               const rsa = await axios.post('https://soc-net.info/api/getUsers.php', data, {
+               const rsa = await axios.post('https://soc-net.info/api/getUsers2.php', data, {
                 headers: {
                   'Content-Type': 'application/json',
                 },
