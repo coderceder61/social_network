@@ -1840,7 +1840,7 @@ upsd.current.style.display='none'
             </div>
           </div>
         <nav>
-            <Link to='/feed'><i className="fa-solid fa-house"></i></Link>
+            <a href='https://social-network-fawn-one.vercel.app/feed'><i className="fa-solid fa-house"></i></a>
             <i onClick={openPost} className="fa-solid fa-circle-plus"></i>
             <div style={{display:'inline-block',position:'relative'}}>
             {notig!==null && notig.cou > 0 ? <div style={{borderRadius:'50%',backgroundColor:'red',width:'10px',height:'10px',position:'absolute',left:'30px',top:'16px'}}></div>:""}
