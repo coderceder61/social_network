@@ -203,16 +203,16 @@ const getUserDataak = async (username) => {
   
     // Run the fetchDataa function once when the component mounts
     fetchDataa();
+     const resln = await getUserDataak(localStorage.getItem("email"));
   
+        
     // If you want to poll for new messages after that, you can still set up the interval
     const checkNew = setInterval(async () => {
       try {
-        const resln = await getUserDataak(localStorage.getItem("email"));
-  
-        const data = { 
+        
+  const data = { 
           id: resln.data.response.id 
         };
-  
         // Fetch new messages
         const notgp = await axios.post('https://soc-net.info/api/getMessages.php', data, {
           headers: { 'Content-Type': 'application/json' }
@@ -607,7 +607,7 @@ const getUserDataak = async (username) => {
     // const [file2, setFile2] = useState(null);
     const [good3, setGood3] = useState(false);
     const [good4, setGood4] = useState(false);
-    const [users,setUsers] = useState(null)
+    //const [users,setUsers] = useState(null)
     const [good1, setGood1] = useState(false);
     const [good2, setGood2] = useState(false);
     const [good33, setGood33] = useState(false);
@@ -1229,7 +1229,7 @@ const getUserDataak = async (username) => {
   }, []); // Runs when `count` changes
     useEffect(() => {
    
-      (async () => {
+       {/*(async () => {
         // e.preventDefault();
     
         const email = { email: localStorage.getItem("email") }; // Example data to send to PHP script
@@ -1244,7 +1244,7 @@ const getUserDataak = async (username) => {
           console.error('Error:', error);
         }
        
-      })();
+      })();*/}
 
       const handleClickOutside = (event) => {
         let commentsBox = document.querySelectorAll('.allp') 
