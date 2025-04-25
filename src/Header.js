@@ -2149,7 +2149,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
                     borderRadius: '50%'
                 }} 
             />}
-            {item.image==null && <i id="profile10" className="dropbtn fa-solid fa-user"></i>}
+            {item.profile_pic==null && <i id="profile10" className="dropbtn fa-solid fa-user"></i>}
             <div style={{overflow:'hidden',display:'flex',flexDirection:'column'}}>
             <Link style={{color:"black"}} to={`/profile?username=${item.username}`}><span style={{display:'inline-block',fontWeight:'500'}}>{item.first_name} {item.last_name}</span></Link>
             <span style={{color:'rgba(0,0,0,0.5'}}>@{item.username}</span>
