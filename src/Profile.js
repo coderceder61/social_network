@@ -178,7 +178,7 @@ const getUserDataak = async (username) => {
   // const [redss, setRedss] = useState(null);
 
   const searchParams = new URLSearchParams(location.search);
-  useEffect(() => {
+  useEffect(async() => {
     const fetchDataa = async () => {
       try {
         // Fetch user data only once on component mount
