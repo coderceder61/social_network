@@ -2133,8 +2133,8 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
     return (
         <div style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}} key={index}>
           <div style={{display:'flex'}}>
-            {item.image!=null && <img onLoad={handleImageLoad} loading="lazy"
-                src={`https://soc-net.info/api/${item.image}`} 
+            {item.profile_pic!=null && <img onLoad={handleImageLoad} loading="lazy"
+                src={`https://soc-net.info/api/${item.profile_pic}`} 
                 alt="Preview" 
                 style={{
                     transition: 'opacity 0.5s ease',
