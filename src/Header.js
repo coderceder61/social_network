@@ -1616,7 +1616,7 @@ up.current.style.display='none'
               if(rresponses.data.length>0)
                 {
                   rresponses.data.map((item,index)=>{
-                    let table = [item.num_of_likes,index-1]
+                    let table = [item.num_of_likes,index]
                     // console.log(table)
                     setLikes((prevState) => [...prevState, table]);
                   })
