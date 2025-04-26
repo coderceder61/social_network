@@ -14,7 +14,7 @@ function Home() {
     const [email,setEmail] = useState('')
     const navigate = useNavigate();
     const generateRandomNumber = () => {
-      randomNum = Math.floor(Math.random()*1000000)
+      randomNum = Math.floor(100000 + Math.random() * 900000)
     };
     const handleSubmit = async (e) => {
       setGood1(false)
