@@ -1598,7 +1598,7 @@ up.current.style.display='none'
 
       let compteur = 0
 
-  {/* useEffect(() => {
+  useEffect(() => {
 
         (async () => {
             let rees = await getUserDataa(localStorage.getItem("email"));  
@@ -1615,11 +1615,11 @@ up.current.style.display='none'
               console.log(rresponses.data)
               if(rresponses.data.length>0)
                 {
-                  rresponses.data.map((item,index)=>{
+                  {/*rresponses.data.map((item,index)=>{
                     let table = [item.num_of_likes,index]
                     // console.log(table)
                     setLikes((prevState) => [...prevState, table]);
-                  })
+                  })*/}
                   setRedss(rresponses.data)
                   console.log(likes)
                   setCheckNewComments(rresponses.data)
@@ -1631,7 +1631,7 @@ up.current.style.display='none'
               console.error('Error:', error);
             }
           })();
-      }, []);*/}
+      }, []);
       useEffect(() => {
 
         (async () => {
