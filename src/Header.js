@@ -303,8 +303,7 @@ function Header() {
   // }
   const [noImage,setNoImage] = useState(false)
 
-  const addNewPost = async (e) => {
-    alert("good")
+ const addNewPost = async (e) => {
   e.preventDefault();
   if (file === null) {
     setNoImage(true);
@@ -320,11 +319,7 @@ function Header() {
   }
 
   try {
-    const responses = await axios.post('https://soc-net.info/api/addNewPost.php', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    });
+    const responses = await axios.post('https://soc-net.info/api/addNewPost.php', formData);
     if (responses.data.success) {
       window.location.reload(true);
     }
