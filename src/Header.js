@@ -2288,7 +2288,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
       </div> }
 
 {followers && <div className='all'>
-        <div ref={popup234} style={{width:"300px"}} className="postp">
+        <div ref={popup234} className="postp">
           <div style={{marginBottom:'20px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
             <h3>Followers</h3>
             <i id="close" onClick={closePost23} className="fa-solid fa-x"></i>
@@ -2399,7 +2399,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
         {/* likesBox */}
         
        {following && <div className='all'>
-         <div ref={popup2344} style={{width:"300px"}} className="postp">
+         <div ref={popup2344} className="postp">
            <div style={{marginBottom:'20px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
              <h3>Following</h3>
              <i id="close" onClick={closePost2348} className="fa-solid fa-x"></i>
@@ -2459,7 +2459,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
 
 
        {following && <div className='all'>
-         <div ref={popup2344} style={{width:"300px"}} className="postp">
+         <div ref={popup2344} className="postp">
            <div style={{marginBottom:'20px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
              <h3>Following</h3>
              <i id="close" onClick={closePost2348} className="fa-solid fa-x"></i>
