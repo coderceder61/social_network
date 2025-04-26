@@ -1872,7 +1872,7 @@ upsd.current.style.display='none'
   }} to={`https://social-network-fawn-one.vercel.app/profile?username=${formData.username}`}>My Profile</Link></div>               
                     <div ref={ups}  onClick={() => {setGood4(false);setProfile2(!profile2);setEditTrue(!edit)}}><i className="fa-solid fa-pen-to-square"></i>Edit Profile</div>
                     <hr/>
-                    <Link ref={log} style={{color:'black'}} to='/'><div><i className="fa-solid fa-right-from-bracket"></i>Logout</div></Link>
+                    <a ref={log} style={{color:'black'}} href='https://social-network-fawn-one.vercel.app/'><div><i className="fa-solid fa-right-from-bracket"></i>Logout</div></a>
                 </div>
             </div>
 
