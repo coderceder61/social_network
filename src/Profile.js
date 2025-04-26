@@ -420,14 +420,14 @@ const getUserDataak = async (username) => {
     const addNewPost = async (e) => {
   e.preventDefault();
   if (file === null) {
-    setNoImage(true);
-    closePost();
+    window.location.href='/feed?p=0';
+        closePost()
     return;
   }
 
   const formData = new FormData();
   formData.append('image', file);
-  formData.append('id', res.data.response.id);
+  formData.append('id', rs.data.response.id);
   if (content !== '') {
     formData.append('content', content);
   }
