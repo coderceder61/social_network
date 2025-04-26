@@ -304,6 +304,7 @@ function Header() {
   const [noImage,setNoImage] = useState(false)
 
   const addNewPost = async (e) => {
+    alert("good")
   e.preventDefault();
   if (file === null) {
     setNoImage(true);
