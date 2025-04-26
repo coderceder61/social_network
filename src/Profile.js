@@ -417,35 +417,30 @@ const getUserDataak = async (username) => {
       // setVisibleOverlay(true)
 
     }
-    const addNewPost = async (e)=>{
-      e.preventDefault()
-      let dataa
-      if(file===null){
-        window.location.href='/feed?p=0';
-        closePost()
-      }else{
-        if(content!==''){
-          dataa = { image:file,content:content,id:rs.data.response.id}; 
-      }
-        else{
-          dataa = { image:file,id:rs.data.response.id}; 
-        }
-  
-        try {
-          const responses = await axios.post('https://soc-net.info/api/addNewPost.php', dataa, {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-            },
-          });
-          if(responses.data.success)
-          {
-              window.location.href='/feed';
-          }  
-      } catch (error) {
-        console.error('Error:', error);
-      }
-      }
+    const addNewPost = async (e) => {
+  e.preventDefault();
+  if (file === null) {
+    setNoImage(true);
+    closePost();
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append('image', file);
+  formData.append('id', res.data.response.id);
+  if (content !== '') {
+    formData.append('content', content);
+  }
+
+  try {
+    const responses = await axios.post('https://soc-net.info/api/addNewPost.php', formData);
+    if (responses.data.success) {
+      window.location.reload(true);
     }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
    useEffect(() => {
         if (notig !== null) {
           //console.log('Updated notifications:', notig);
