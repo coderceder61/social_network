@@ -303,36 +303,35 @@ function Header() {
   // }
   const [noImage,setNoImage] = useState(false)
 
-  const addNewPost = async (e)=>{
-    e.preventDefault()
-    let dataa
-    if(file===null){
-      setNoImage(true)
-      closePost()
-    }else{
-      if(content!==''){
-        dataa = { image:file,content:content,id:res.data.response.id}; 
-    }
-      else{
-        dataa = { image:file,id:res.data.response.id}; 
-      }
-
-      try {
-        responses = await axios.post('https://soc-net.info/api/addNewPost.php', dataa, {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-          },
-        });
-        //console.log(responses)
-        if(responses.data.success)
-        {
-          window.location.reload(true);
-        }
-    } catch (error) {
-      console.error('Error:', error);
-    }
-    }
+  const addNewPost = async (e) => {
+  e.preventDefault();
+  if (file === null) {
+    setNoImage(true);
+    closePost();
+    return;
   }
+
+  const formData = new FormData();
+  formData.append('image', file);
+  formData.append('id', res.data.response.id);
+  if (content !== '') {
+    formData.append('content', content);
+  }
+
+  try {
+    const responses = await axios.post('https://soc-net.info/api/addNewPost.php', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    if (responses.data.success) {
+      window.location.reload(true);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
 
   const deletePost = async (id_post)=>{
     let dat  
