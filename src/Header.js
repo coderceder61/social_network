@@ -1854,7 +1854,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
                     <div ref={upps} onClick={() => {setEditTrue(false);setProfile2(false);setProfile(true);setEdtTrue(false)}}><i className="fa-solid fa-address-book"></i>My Profile</div>               
                     <div ref={ups}  onClick={() => {setEditTrue(!edit)}}><i className="fa-solid fa-pen-to-square"></i>Edit Profile</div>
                     <hr/>
-                    <Link ref={log} style={{color:'black'}} to='/'><div><i className="fa-solid fa-right-from-bracket"></i>Logout</div></Link>
+                    <a ref={log} style={{color:'black'}} href='https://social-network-fawn-one.vercel.app/'><div><i className="fa-solid fa-right-from-bracket"></i>Logout</div></a>
                 </div>}
             </div>
 
