@@ -20,7 +20,7 @@ function Home() {
         setCode(e.target.value);
     }
     const generateRandomNumber = () => {
-        randomNum = Math.floor(Math.random()*1000000)
+        randomNum = Math.floor(100000 + Math.random() * 900000)
       };
     const location = useLocation();
     // console.log(location.state)
