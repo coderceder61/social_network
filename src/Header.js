@@ -1631,7 +1631,7 @@ up.current.style.display='none'
               console.error('Error:', error);
             }
           })();
-      }, [likes]);
+      }, []);
       useEffect(() => {
 
         (async () => {
