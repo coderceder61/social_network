@@ -1598,7 +1598,7 @@ up.current.style.display='none'
 
       let compteur = 0
 
-      useEffect(() => {
+  {/* useEffect(() => {
 
         (async () => {
             let rees = await getUserDataa(localStorage.getItem("email"));  
@@ -1631,7 +1631,7 @@ up.current.style.display='none'
               console.error('Error:', error);
             }
           })();
-      }, []);
+      }, []);*/}
       useEffect(() => {
 
         (async () => {
