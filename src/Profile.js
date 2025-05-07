@@ -428,8 +428,8 @@ const getUserDataak = async (username) => {
   const formData = new FormData();
   formData.append('image', file);
   formData.append('id', rs.data.response.id);
-  if (content !== '') {
-    formData.append('content', content);
+  if (content123 !== '') {
+    formData.append('content', content123);
   }
 
   try {
@@ -565,10 +565,16 @@ const getUserDataak = async (username) => {
         const dro = useRef(null);
         const dr = useRef(null);
         const [content, setContent] = useState("");
-        const [newMessages, setNewMessages] = useState(null);
+        const [content123, setContent123] = useState("");
+
+   const [newMessages, setNewMessages] = useState(null);
 
         const handleContentChange = (e)=>{
           setContent(e.target.value)
+        }
+
+   const handleChange123 = (e)=>{
+          setContent123(e.target.value)
         }
         const [user, setUser] = useState("");
         const [followers, setFollowers] = useState(false);
@@ -2009,7 +2015,7 @@ upsd.current.style.display='none'
       <input autocomplete="off" accept="image/*" 
         onChange={handleFileChange} className="put" type="file"/><br/>
       <label htmlFor="say">Say Something</label><br/>
-      <input autocomplete="off" style={{height:'35px',padding:'5px',width:'100%',marginTop:'10px',marginBottom:'10px'}} type="text" name="say" id="say"/><br/>
+      <input autocomplete="off" value={content123} onChange={handleChange123} style={{height:'35px',padding:'5px',width:'100%',marginTop:'10px',marginBottom:'10px'}} type="text" name="say" id="say"/><br/>
       <input type="submit" autocomplete="off" value="Post" style={{padding:'10px',color:'white',backgroundColor:'#0b5ed7'}}/>
     </form>
   </div>
