@@ -1183,7 +1183,7 @@ function Header() {
         // Cleanup function to clear the interval
         return () => clearInterval(checkNew);
       
-      }, []); // Empty dependency array ensures this useEffect runs only once
+      }, [notgpv]); // Empty dependency array ensures this useEffect runs only once
       
       // Log notig when it changes
       useEffect(() => {
