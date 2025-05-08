@@ -840,6 +840,7 @@ function Header() {
       }
     };
     const handleFileChange2 = (event) => {
+    setImage2(null)
     console.log(formData.image, formData);
     const file2 = event.target.files[0];
     console.log("File selected:", file2);
