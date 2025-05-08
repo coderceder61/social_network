@@ -311,15 +311,15 @@ function Header() {
     return;
   }
 
-  const formData = new FormData();
-  formData.append('image', file);
-  formData.append('id', res.data.response.id);
+  const formData23 = new FormData();
+  formData23.append('image', file);
+  formData23.append('id', res.data.response.id);
   if (content !== '') {
-    formData.append('content', content);
+    formData23.append('content', content);
   }
 
   try {
-    const responses = await axios.post('https://soc-net.info/api/addNewPost.php', formData);
+    const responses = await axios.post('https://soc-net.info/api/addNewPost.php', formData23);
     if (responses.data.success) {
       window.location.reload(true);
     }
