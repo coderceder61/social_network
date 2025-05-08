@@ -906,6 +906,7 @@ const getUserDataak = async (username) => {
 
       const reader = new FileReader();
       reader.onload = (e) => {
+         console.log(image2,'hey')
         setImage2(e.target.result);
       };
       reader.readAsDataURL(file2);
