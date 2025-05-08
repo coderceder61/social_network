@@ -842,7 +842,7 @@ function Header() {
     const handleFileChange2 = (event) => {
       console.log(!edit,!profile2,profile);
       const file = event.target.files[0]; // Access the selected file directly
-      setImage2(null)
+      //setImage2(null)
       if (!file) {
         //console.log("No file selected.");
         return; // Early exit if no file selected
