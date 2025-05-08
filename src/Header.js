@@ -840,35 +840,24 @@ function Header() {
       }
     };
     const handleFileChange2 = (event) => {
-      console.log(!edit,!profile2,profile);
-      const file = event.target.files[0]; // Access the selected file directly
-      //setImage2(null)
-      if (!file) {
-        //console.log("No file selected.");
-        return; // Early exit if no file selected
-      }
-    
-      // Set state for profile and form data
-      setProfile(true);
-      setFile2(file); // Update the file state
-    
-      setFormData(prevState => ({
-        ...prevState,
-        image: file
+    const file2 = event.target.files[0];
+    console.log("File selected:", file2);
+
+    if (file2 && file2.type.startsWith('image/')) {
+      setFormData(prev => ({
+        ...prev,
+        image: file2
       }));
-    
-      // Check if the selected file is an image
-      if (file.type.startsWith('image/')) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          setImage2(e.target.result); // Set the image source for preview
-        };
-        reader.readAsDataURL(file);
-      } else {
-        //console.log("Please upload an image file.");
-        // Optionally, you could also set an error state here for UI feedback.
-      }
-    };
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImage2(e.target.result);
+      };
+      reader.readAsDataURL(file2);
+    } else {
+      console.log("Please upload a valid image.");
+    }
+  };
     const [vis,setVis] = useState(false)
     // const [comments,setComments] = useState(false)
     const openComments = (id_post) => {
