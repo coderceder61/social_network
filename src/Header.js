@@ -840,8 +840,6 @@ function Header() {
       }
     };
     const handleFileChange2 = (event) => {
-    setImage2(null)
-    console.log(formData.image, formData);
     const file2 = event.target.files[0];
     console.log("File selected:", file2);
 
@@ -853,8 +851,8 @@ function Header() {
 
       const reader = new FileReader();
       reader.onload = (e) => {
-        console.log("File content (base64):", e.target.result);
-        setImage2(e.target.result); // This should work now if image2 is correctly defined
+         console.log(image2,'hey')
+        setImage2(e.target.result);
       };
       reader.readAsDataURL(file2);
     } else {
