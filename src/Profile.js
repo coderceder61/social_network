@@ -1961,7 +1961,7 @@ upsd.current.style.display='none'
           <img onLoad={handleImageLoad2} loading="lazy"
             src={image2} 
             alt="Previewa" 
-            style={{ maxWidth: '100%', height: 'auto' }} 
+            style={{ transition: 'opacity 0.5s ease',maxWidth: '100%', height: 'auto' }} 
           />
         </div>
       )}
