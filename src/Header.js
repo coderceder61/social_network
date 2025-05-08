@@ -1928,7 +1928,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
       {image2 && (
         <div style={{border:'1px solid rgb(200,200,200)',padding:'2px',margin:'30px 20px',width:'150px',height:'auto'}}>
           <img onLoad={handleImageLoad2} loading="lazy"
-            src={image2} 
+            src={formData.image} 
             alt="Preview1" 
             style={{ transition: 'opacity 0.5s ease',maxWidth: '100%', height: 'auto' }} 
           />
