@@ -852,7 +852,7 @@ function Header() {
 
       const reader = new FileReader();
       reader.onload = (e) => {
-        console.log(image2,'hey')
+        console.log(e.target.result,'hey')
         setImage2(e.target.result);
       };
       reader.readAsDataURL(file2);
