@@ -149,12 +149,14 @@ body {
   display: flex;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  flex-direction:column;
 }
 
 .info-box {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
+  width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -180,11 +182,14 @@ body {
 }
 .info-boxes{
   flex-grow:9;
+  display: flex;
+  justify-content: space-between;
 }
 
 .info-content {
   display: flex;
   flex-direction: column;
+  
 }
 
 .info-text {
