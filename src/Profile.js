@@ -170,7 +170,7 @@ const getUserDataak = async (username) => {
     } catch (error) {
       console.error('Error:', error);
     }
-  }, 1000);
+  }, 10000);
     }}
   }
   // const [noImage,setNoImage] = useState(false)
@@ -206,7 +206,7 @@ const getUserDataak = async (username) => {
         } catch (error) {
           console.error("Polling error:", error);
         }
-      }, 1000);
+      }, 10000);
     } catch (error) {
       console.error('Initial fetch error:', error);
     }
@@ -404,7 +404,7 @@ const getUserDataak = async (username) => {
         } catch (error) {
           console.error('Error:', error);
         }
-      }, 1000);
+      }, 10000);
       // setVisibleOverlay(true)
 
     }
@@ -1086,7 +1086,7 @@ const getUserDataak = async (username) => {
     } catch (error) {
       console.error('Error fetching new messages:', error);
     }
-  }, 1000);
+  }, 10000);
 
   // Cleanup interval on unmount or if res changes
   return () => clearInterval(intervalId);
@@ -1718,7 +1718,7 @@ upsd.current.style.display='none'
         };
   
         // Set an interval to keep fetching new messages
-        checkNewMessages2 = setInterval(fetch, 1000);
+        checkNewMessages2 = setInterval(fetch, 10000);
         return () => {
           clearInterval(checkNewMessages2); // Cleanup the interval on component unmount or dependency change
         };
