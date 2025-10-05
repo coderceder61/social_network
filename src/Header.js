@@ -2514,6 +2514,7 @@ marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'3
                   <div className='maroc'><img
   style={{
     width: '100%',
+        justifyContent: 'center',display: 'flex',alignItems: 'center',
     position: 'absolute',  // Added quotes around 'absolute'
     transition: 'opacity 0.5s ease',
   }}
