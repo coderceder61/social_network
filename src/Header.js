@@ -868,6 +868,8 @@ function Header() {
       if(document.querySelector(`.allp.comments.boxC_${id_post}`).style.display=='none'){
         document.querySelector(`.allp.comments.boxC_${id_post}`).style.display='flex';
         // alert(11)
+        document.querySelector(`.allp.comments.boxC_${id_post} > div > div.senegal`).style.height = 
+        document.querySelector(`.allp.comments.boxC_${id_post} > div > div.maroc>img`).offsetHeight + 'px';
       }
       let data = {id_post:id_post}; 
       checkNewCommennt = setInterval(async () => {
