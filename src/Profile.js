@@ -178,55 +178,46 @@ const getUserDataak = async (username) => {
   // const [redss, setRedss] = useState(null);
 
   const searchParams = new URLSearchParams(location.search);
-  useEffect(async() => {
-    const fetchDataa = async () => {
-      try {
-        // Fetch user data only once on component mount
-        const email = localStorage.getItem("email");
-        resl = await getUserDataak(email);
-        // console.log(resl)
-  
-        const data = { 
-          id: resl.data.response.id 
-        };
-  
-        // Fetch messages
-        const notgp = await axios.post('https://soc-net.info/api/getMessages.php', data, {
-          headers: { 'Content-Type': 'application/json' }
-        });
-        //console.log(notgp.data)
-        setNotgp(notgp.data);
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
-  
-    // Run the fetchDataa function once when the component mounts
-    fetchDataa();
-     const resln = await getUserDataak(localStorage.getItem("email"));
-  
-        
-    // If you want to poll for new messages after that, you can still set up the interval
-    const checkNew = setInterval(async () => {
-      try {
-        
-  const data = { 
-          id: resln.data.response.id 
-        };
-        // Fetch new messages
-        const notgp = await axios.post('https://soc-net.info/api/getMessages.php', data, {
-          headers: { 'Content-Type': 'application/json' }
-        });
-        setNotgp(notgp.data);
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    }, 1000);
-  
-    // Cleanup function to clear the interval
-    return () => clearInterval(checkNew);
-  
-  }, []); // Empty dependency array ensures this useEffect runs only once
+  useEffect(() => {
+  let intervalId;
+
+  const fetchData = async () => {
+    try {
+      const email = localStorage.getItem("email");
+      const resl = await getUserDataak(email);
+
+      const data = { 
+        id: resl.data.response.id 
+      };
+
+      // Initial message fetch
+      const notgp = await axios.post('https://soc-net.info/api/getMessages.php', data, {
+        headers: { 'Content-Type': 'application/json' }
+      });
+      setNotgp(notgp.data);
+
+      // Now set up polling interval
+      intervalId = setInterval(async () => {
+        try {
+          const notgp = await axios.post('https://soc-net.info/api/getMessages.php', data, {
+            headers: { 'Content-Type': 'application/json' }
+          });
+          setNotgp(notgp.data);
+        } catch (error) {
+          console.error("Polling error:", error);
+        }
+      }, 1000);
+    } catch (error) {
+      console.error('Initial fetch error:', error);
+    }
+  };
+
+  fetchData();
+
+  // Cleanup on unmount
+  return () => clearInterval(intervalId);
+}, []);
+
   username =  searchParams.get('username'); // Get the 'myParam' query parameter
   const getUserDataa = async (username) => {
   
