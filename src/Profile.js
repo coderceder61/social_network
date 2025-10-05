@@ -1067,30 +1067,31 @@ const getUserDataak = async (username) => {
      }
 
   useEffect(() => {
-    if (!res) return; // Early return if `res` is not available
+  if (!res || !res.data?.response?.id) return;
 
-    const data = { id_exp: res.data.response.id }; 
-    const checkNewMessagess = setInterval(async () => {
-      try {
-        const response = await axios.post('https://soc-net.info/api/checkNewMessages2.php', data, {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-        
-        setNewMessageffs(response.data); // Save the new messages to state
-        // console.log(response.data);
-        if(response.data!==0) // Log the messages to the console
-          setFlag(true)
-      } catch (error) {
-        console.error('Error:', error);
+  const data = { id_exp: res.data.response.id };
+
+  const intervalId = setInterval(async () => {
+    try {
+      const response = await axios.post('https://soc-net.info/api/checkNewMessages2.php', data, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      setNewMessageffs(response.data);
+      if (response.data !== 0) {
+        setFlag(true);
       }
-    }, 1000);
+    } catch (error) {
+      console.error('Error fetching new messages:', error);
+    }
+  }, 1000);
 
-    // Cleanup function to clear the interval
-    return () => clearInterval(checkNewMessagess);
+  // Cleanup interval on unmount or if res changes
+  return () => clearInterval(intervalId);
 
-  }, [res]); // Run effect again if `res` changes
+}, [res?.data?.response?.id]); // Only rerun if user ID actually changes
      const closePost = ()=>{
       // setVis(!vis)
       setVisibleOverlay(false)
