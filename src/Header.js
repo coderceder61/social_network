@@ -870,7 +870,7 @@ function Header() {
         // alert(11)
         let element = document.querySelector(`.allp.comments.boxC_${id_post} > div > div.maroc>img`);
         document.querySelector(`.allp.comments.boxC_${id_post} > div > div.senegal`).style.height = 
-        window.getComputedStyle(element).height;
+        document.querySelector(`#root > div.allp.comments.boxC_${id_post} > div > div.maroc > img`).height;
       }
       let data = {id_post:id_post}; 
       checkNewCommennt = setInterval(async () => {
