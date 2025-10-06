@@ -569,6 +569,7 @@ button.unblock{
 .maroc img{
   width: 100%; 
   position: absolute;
+max-height: -webkit-fill-available;
 }
 #kol{
   margin:60px;
