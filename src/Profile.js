@@ -22,6 +22,7 @@ let checkNewComment = []
 let rresponses = null
 
 function Profile() {
+  const [spinner, setSpinner] = useState(false);
    
     
     const [flag,setFlag] = useState(false)
@@ -412,6 +413,7 @@ const getUserDataak = async (username) => {
 
     }
     const addNewPost = async (e) => {
+       setSpinner(true)
   e.preventDefault();
   if (file === null) {
     window.location.href='/feed?p=0';
@@ -429,6 +431,7 @@ const getUserDataak = async (username) => {
   try {
     const responses = await axios.post('https://soc-net.info/api/addNewPost.php', formData);
     if (responses.data.success) {
+       setSpinner(false)
       window.location.reload(true);
     }
   } catch (error) {
@@ -1790,6 +1793,7 @@ upsd.current.style.display='none'
       }, [checkNewComments]);
   return (
     <>
+   <div class="spinner"></div>
     {visibleOverlay && <div className="overlay"></div>}
     <header id="section1">
         <div style={{textAlign:'center'}}><a href="https://social-network-fawn-one.vercel.app/feed"><span id="logo">soc-net</span></a></div>
