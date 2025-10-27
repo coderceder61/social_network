@@ -810,7 +810,7 @@ function Header() {
         };
   
         // Set an interval to keep fetching new messages
-        checkNewMessages2 = setInterval(fetch, 5000);
+        checkNewMessages2 = setInterval(fetch, 1000);
         return () => {
           clearInterval(checkNewMessages2); // Cleanup the interval on component unmount or dependency change
         };
@@ -1171,7 +1171,7 @@ function Header() {
           } catch (error) {
             console.error('Error:', error);
           }
-        }, 5000);
+        }, 1000);
       
         // Cleanup function to clear the interval
         return () => clearInterval(checkNew);
@@ -1711,7 +1711,7 @@ up.current.style.display='none'
       } catch (error) {
         console.error('Error:', error);
       }
-    }, 5000);
+    }, 1000);
 
     // Cleanup function to clear the interval
     return () => clearInterval(checkNewMessagess);
