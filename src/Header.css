@@ -578,6 +578,9 @@ overflow-y: scroll;
     border-top: 5px solid #F00; /* La bordure qui tourne (bleu vif) */
     border-radius: 50%; /* Pour former un cercle parfait */
     animation: spin 1s linear infinite; /* Applique l'animation 'spin' */
+    position:absolute;
+    right:20px;
+    top:30px;
 }
 
 /* Définition de l'animation de rotation */
