@@ -31,6 +31,7 @@ let queryParams
 
 function Header() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [spinner, setSpinner] = useState(false);
 
   const handleImageLoad = () => {
     setIsLoaded(true);
@@ -304,6 +305,7 @@ function Header() {
   const [noImage,setNoImage] = useState(false)
 
  const addNewPost = async (e) => {
+  setSpinner(true)
   e.preventDefault();
   if (file === null) {
     setNoImage(true);
@@ -321,6 +323,7 @@ function Header() {
   try {
     const responses = await axios.post('https://soc-net.info/api/addNewPost.php', formData23);
     if (responses.data.success) {
+      setSpinner(false)
       window.location.reload(true);
     }
   } catch (error) {
