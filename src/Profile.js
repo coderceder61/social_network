@@ -170,7 +170,7 @@ const getUserDataak = async (username) => {
     } catch (error) {
       console.error('Error:', error);
     }
-  }, 10000);
+  }, 1000);
     }}
   }
   // const [noImage,setNoImage] = useState(false)
@@ -407,7 +407,7 @@ const getUserDataak = async (username) => {
         } catch (error) {
           console.error('Error:', error);
         }
-      }, 10000);
+      }, 1000);
       // setVisibleOverlay(true)
 
     }
