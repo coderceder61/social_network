@@ -575,7 +575,7 @@ overflow-y: scroll;
     width: 50px; /* Largeur du cercle */
     height: 50px; /* Hauteur du cercle */
     border: 5px solid #ccc; /* Bordure principale (gris clair) */
-    border-top: 5px solid #3498db; /* La bordure qui tourne (bleu vif) */
+    border-top: 5px solid #F00; /* La bordure qui tourne (bleu vif) */
     border-radius: 50%; /* Pour former un cercle parfait */
     animation: spin 1s linear infinite; /* Applique l'animation 'spin' */
 }
