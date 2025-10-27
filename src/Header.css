@@ -571,3 +571,22 @@ overflow-y: scroll;
   }
 }
 
+.spinner {
+    width: 50px; /* Largeur du cercle */
+    height: 50px; /* Hauteur du cercle */
+    border: 5px solid #ccc; /* Bordure principale (gris clair) */
+    border-top: 5px solid #3498db; /* La bordure qui tourne (bleu vif) */
+    border-radius: 50%; /* Pour former un cercle parfait */
+    animation: spin 1s linear infinite; /* Applique l'animation 'spin' */
+}
+
+/* Définition de l'animation de rotation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Commence sans rotation */
+    }
+    100% {
+        transform: rotate(360deg); /* Tourne sur 360 degrés */
+    }
+}
+
