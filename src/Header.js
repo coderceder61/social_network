@@ -270,7 +270,7 @@ function Header() {
   } catch (error) {
     console.error('Error:', error);
   }
-}, 5000);
+}, 1000);
   }}
 }
   
@@ -895,7 +895,7 @@ function Header() {
         } catch (error) {
           console.error('Error:', error);
         }
-      }, 5000);
+      }, 1000);
       // setVisibleOverlay(true)
 
     }
