@@ -688,3 +688,25 @@ max-height: -webkit-fill-available;
     width:100%;
   }
 }
+
+.spinner {
+    width: 50px; /* Largeur du cercle */
+    height: 50px; /* Hauteur du cercle */
+    border: 5px solid #ccc; /* Bordure principale (gris clair) */
+    border-top: 5px solid #F00; /* La bordure qui tourne (bleu vif) */
+    border-radius: 50%; /* Pour former un cercle parfait */
+    animation: spin 1s linear infinite; /* Applique l'animation 'spin' */
+    position:absolute;
+    right:20px;
+    top:30px;
+}
+
+/* Définition de l'animation de rotation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Commence sans rotation */
+    }
+    100% {
+        transform: rotate(360deg); /* Tourne sur 360 degrés */
+    }
+}
