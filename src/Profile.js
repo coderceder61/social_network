@@ -1793,7 +1793,7 @@ upsd.current.style.display='none'
       }, [checkNewComments]);
   return (
     <>
-   <div class="spinner"></div>
+    {spinner && <div className="spinner"></div>}
     {visibleOverlay && <div className="overlay"></div>}
     <header id="section1">
         <div style={{textAlign:'center'}}><a href="https://social-network-fawn-one.vercel.app/feed"><span id="logo">soc-net</span></a></div>
