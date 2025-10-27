@@ -1722,7 +1722,7 @@ up.current.style.display='none'
   }, [res]); // Run effect again if `res` changes
   return (
     <>
-    {true && <div className="spinner"></div>}
+    {spinner && <div className="spinner"></div>}
     {visibleOverlay && <div className="overlay"></div>}
     {viss && <div ref={po} className='all'>
   <div ref={popup23} className="post">
