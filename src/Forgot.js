@@ -40,7 +40,7 @@ function Home() {
             <label style={{margin:'10px 20px',fontSize:'1.2em',fontWeight:'400'}}>Forgot Your Password ?</label><br/>
             <input autocomplete="off" value={email} onChange={handleChange} style={{width:'90%',margin:'10px 20px'}} type="email" placeholder='enter your email' name='email'/><br/>
             {good3 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>if an account exists, we sent an email</span>}
-{good4 && <div className="loader"></div>}
+{good4 && <div className="loader2"></div>}
 
             {good1 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>enter your email id !</span>}
             
