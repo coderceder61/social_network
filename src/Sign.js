@@ -140,7 +140,7 @@ function Home() {
             <div style={{display:'flex',alignItems:'center'}}>
             <input autocomplete="off" checked={formData.gender === 'male'} onChange={handleChange3} type="radio" id="male" value='male' name="gender"/><label htmlFor='male'>Male</label>
             <input autocomplete="off" checked={formData.gender === 'female'} onChange={handleChange3} type="radio" id="female" value='female' name="gender"/><label htmlFor='female'>Female</label>
-              <input autocomplete="off" checked={formData.gender === 'other'} onChange={handleChange3} type="radio" id="other" value='other' name="gender"/><label htmlFor='other'>Other</label>
+             
             </div>
             <input autocomplete="off" value={formData.e_mail} onChange={handleChange4} style={{width:'90%',margin:'15px 20px 10px 20px'}} required type="email" placeholder='email' name='e_mail'/>
             {good3 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(243, 10, 100)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>email is not given</span>}
