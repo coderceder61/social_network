@@ -10,6 +10,7 @@ function Home() {
   const [searchParams] = useSearchParams();
   const token = searchParams.get("token");
   const [good1,setGood1] = useState(false)
+  const [good3,setGood3] = useState(false)
   const [pass,setPass] = useState('')  
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ function Home() {
     if(pass===''){
       setGood1(true)
     }else{
+      setGood3(true)
       try {
        const res = await fetch("https://soc-net.info/api/update_password.php", {
           method: "POST",
@@ -28,6 +30,8 @@ function Home() {
           body: new URLSearchParams({ token, password: pass })
         });
         const data = await res.json();
+              setGood3(false)
+
         setMessage(data.status === "success" ? "Password updated!" : data.message);
         // console.log('Form data sent successfully:', response.data);
         
@@ -46,6 +50,7 @@ function Home() {
             <input autocomplete="off" value={pass} onChange={handleChange} style={{width:'90%',margin:'10px 20px'}} type="password" placeholder='new password' name='code'/><br/>
             {good1 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>enter your new password</span>}
             <div style={{margin:'10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between'}}><input autocomplete="off" style={{padding:'5px 10px',backgroundColor:'#0b5ed7',color:'white',borderRadius:'5px'}} type="submit" value="Change Password" name="sign"/></div>
+{good3 && <div className="loader2"></div>}
   {message && <p style={{    background: '#5ded5d',
     margin: '10px 20px',
     color: 'white',
