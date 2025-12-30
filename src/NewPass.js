@@ -6,8 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import { useSearchParams } from "react-router-dom";
 
 function Home() {
-  const token = searchParams.get("token");
+  
   const [searchParams] = useSearchParams();
+  const token = searchParams.get("token");
   const [good1,setGood1] = useState(false)
   const [pass,setPass] = useState('')  
   const [message, setMessage] = useState("");
@@ -17,14 +18,14 @@ function Home() {
   }
   const handleSubmit = async (e)=>{
     e.preventDefault();
-    if(pass==''){
+    if(pass===''){
       setGood1(true)
     }else{
       try {
        const res = await fetch("https://soc-net.info/update_password.php", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams({ token, pass })
+          body: new URLSearchParams({ token, password: pass })
         });
         const data = await res.json();
         setMessage(data.status === "success" ? "Password updated!" : data.message);
