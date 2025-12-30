@@ -8,6 +8,7 @@ import axios from 'axios';
 function Home() {
     const [good1,setGood1] = useState(false)
     const [good3,setGood3] = useState(false)
+    const [good4,setGood4] = useState(false)
     const [email,setEmail] = useState('')
     const navigate = useNavigate();
    
@@ -15,12 +16,15 @@ function Home() {
       e.preventDefault();
         if(email===''){
           setGood1(true)
+            setGood3(false)
         }else{
-
+            setGood4(true)
+            setGood1(false)
           try {
             const response = await axios.post('https://soc-net.info/api/auth2.php',{
               email: email,  // Example data to send
             });
+              setGood4(false)
             setGood3(true)
           } catch (error) {
             console.error('Error sending form data:', error);
@@ -36,6 +40,7 @@ function Home() {
             <label style={{margin:'10px 20px',fontSize:'1.2em',fontWeight:'400'}}>Forgot Your Password ?</label><br/>
             <input autocomplete="off" value={email} onChange={handleChange} style={{width:'90%',margin:'10px 20px'}} type="email" placeholder='enter your email' name='email'/><br/>
             {good3 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>if an account exists, we sent an email</span>}
+{good4 && <div className="loader"></div>}
 
             {good1 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>enter your email id !</span>}
             
