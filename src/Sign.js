@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 import {useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import ReCAPTCHA from "react-google-recaptcha";
 function Home() {
+  const [captchaToken, setCaptchaToken] = useState(null);
   const navigate = useNavigate();
   const handleRedirect = () => {
     navigate('/'); // Navigate to the About page
@@ -26,7 +27,10 @@ function Home() {
   const [good5,setGood5] = useState(false)
   const [good30,setGood30] = useState(false)
   const [good31,setGood31] = useState(false)
-
+const handleCaptchaChange = (token) => {
+        setCaptchaToken(token)
+      setFormData(prev => ({ ...prev, captchaToken: token }));
+    }
   const handleChange1 = (e)=>{
     const { name, value } = e.target;
       setFormData(prevState => ({
@@ -77,6 +81,10 @@ function Home() {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!captchaToken) {
+      alert("Please verify that you are not a robot");
+      return;
+    }
     setGood4(false)
     setGood1(false)
     setGood2(false)
@@ -150,6 +158,12 @@ function Home() {
             {good31 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(243, 10, 100)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>username is not given</span>}
             <input autocomplete="off" value={formData.password} onChange={handleChange6} style={{width:'90%',margin:'5px 20px'}} type="password" placeholder='password' name='password'/>
             {good5 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(243, 10, 100)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>password is not given</span>}
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                  <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                    onChange={handleCaptchaChange}
+                  />
+                </div>
             <div style={{margin:'10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between'}}><input autocomplete="off" style={{padding:'5px 10px',backgroundColor:'#0b5ed7',color:'white',borderRadius:'5px'}} type="submit" value="Sign Up" name="sign"/><Link to='/' style={{textDecoration:'none'}} >Already have an account ?</Link></div>
         </form>
     </div>
