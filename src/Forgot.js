@@ -13,6 +13,7 @@ function Home() {
     const navigate = useNavigate();
    
     const handleSubmit = async (e) => {
+        setGood3(false)
       e.preventDefault();
         if(email===''){
           setGood1(true)
