@@ -32,7 +32,7 @@ function Home() {
         const data = await res.json();
               setGood3(false)
 
-        setMessage(data.status === "success" ? "Password updated!" : data.message);
+        setMessage(data.status === "success" ? "Password updated!" : data.messag);
         // console.log('Form data sent successfully:', response.data);
         
         }
@@ -51,15 +51,15 @@ function Home() {
             {good1 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>enter your new password</span>}
             <div style={{margin:'10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between'}}><input autocomplete="off" style={{padding:'5px 10px',backgroundColor:'#0b5ed7',color:'white',borderRadius:'5px'}} type="submit" value="Change Password" name="sign"/></div>
 {good3 && <div className="loader2"></div>}
-  {message && <p style={{    background: '#5ded5d',
+  {message && <p style={{    background:data.status? '#ff9090':'#5ded5d',
     margin: '10px 20px',
     color: 'white',
-    /* opacity: .8; */
+    borderRadius: '5px';
     padding: '10px',
     width: 'fit-content',
     display: 'flex',
     justifyContent: 'center',
-    textAlign: 'center'}}>{message}</p>}
+    textAlign: 'center'}}>{data.status!=="error"?"Password Updated":"Invalid or expired token"}</p>}
             <Link to='/' style={{margin:'10px 20px'}} href=""><i style={{marginRight:'5px'}} className="fa-solid fa-circle-arrow-left"></i>Go Back To Login</Link>
         </form>
     </div>
