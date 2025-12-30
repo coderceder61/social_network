@@ -108,11 +108,12 @@ function Home() {
               <input autocomplete="off" onChange={handleChange2} value={formData.password} style={{width:'90%',margin:'10px 20px'}} type="password" placeholder='password' name='password'/>
               {good2 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>password is not given</span>}
               {gaga && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>something is incorrect, we can't find you</span>}
-                <ReCAPTCHA
-                  sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                  onChange={handleCaptchaChange}
-                  onExpired={() => setCaptchaToken(null)}
-                />
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                    onChange={handleCaptchaChange}
+                  />
+                </div>
               <div style={{margin:'10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between'}}><input autocomplete="off" style={{padding:'5px 10px',backgroundColor:'#0b5ed7',color:'white',borderRadius:'5px'}} type="submit" value="Sign in" name="sign"/><Link style={{textDecoration:'none'}} to='/signup'>Create New Account</Link></div>
               <Link to='/forgot' style={{margin:'10px 20px'}}>Forgot password?</Link>
           </form>
