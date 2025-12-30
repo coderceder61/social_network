@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import './Home.css'
+import ReCAPTCHA from "react-google-recaptcha";
+
 import Logo from './logo.png'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -7,6 +9,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Home() {
+    const [captchaToken, setCaptchaToken] = useState(null);
+
   localStorage.removeItem("email");
   if(localStorage.getItem('isAdmin')==='admin'){
     localStorage.removeItem('isAdmin');
@@ -38,8 +42,18 @@ function Home() {
       }));
      
   }
+
+    const handleCaptchaChange = (token) => {
+      setFormData(prev => ({ ...prev, captchaToken: token }));
+    }
+
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!captchaToken) {
+      alert("Please verify that you are not a robot");
+      return;
+    }
     setGood(false)
     setGood2(false)
     setGaga(false)
@@ -94,6 +108,11 @@ function Home() {
               <input autocomplete="off" onChange={handleChange2} value={formData.password} style={{width:'90%',margin:'10px 20px'}} type="password" placeholder='password' name='password'/>
               {good2 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>password is not given</span>}
               {gaga && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>something is incorrect, we can't find you</span>}
+                <ReCAPTCHA
+                  sitekey="6LeDWzssAAAAALUf7bsXlzyIP0ipgVhWvAIxP-ny"
+                  onChange={handleCaptchaChange}
+                  onExpired={() => setCaptchaToken(null)}
+                />
               <div style={{margin:'10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between'}}><input autocomplete="off" style={{padding:'5px 10px',backgroundColor:'#0b5ed7',color:'white',borderRadius:'5px'}} type="submit" value="Sign in" name="sign"/><Link style={{textDecoration:'none'}} to='/signup'>Create New Account</Link></div>
               <Link to='/forgot' style={{margin:'10px 20px'}}>Forgot password?</Link>
           </form>
