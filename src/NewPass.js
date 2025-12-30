@@ -32,7 +32,7 @@ function Home() {
         const data = await res.json();
               setGood3(false)
 
-        setMessage(data.status === "success" ? "Password updated!" : data.messag);
+        setMessage(data);
         // console.log('Form data sent successfully:', response.data);
         
         }
@@ -51,7 +51,7 @@ function Home() {
             {good1 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>enter your new password</span>}
             <div style={{margin:'10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between'}}><input autocomplete="off" style={{padding:'5px 10px',backgroundColor:'#0b5ed7',color:'white',borderRadius:'5px'}} type="submit" value="Change Password" name="sign"/></div>
 {good3 && <div className="loader2"></div>}
-  {message && <p style={{    background:data.status? '#ff9090':'#5ded5d',
+  {message && <p style={{    background:data.status==="error"? '#ff9090':'#5ded5d',
     margin: '10px 20px',
     color: 'white',
     borderRadius: '5px';
