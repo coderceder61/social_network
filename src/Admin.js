@@ -64,6 +64,7 @@ const handleVerify = async (e,email) => {
   const formData = {
     username: username,
     password: password,
+    with_captcha : 0,
   };
   console.log(formData);
 
