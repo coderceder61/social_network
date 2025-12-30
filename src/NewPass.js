@@ -22,7 +22,7 @@ function Home() {
       setGood1(true)
     }else{
       try {
-       const res = await fetch("https://soc-net.info/update_password.php", {
+       const res = await fetch("https://soc-net.info/api/update_password.php", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams({ token, password: pass })
