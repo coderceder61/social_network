@@ -44,6 +44,7 @@ function Home() {
   }
 
     const handleCaptchaChange = (token) => {
+        setCaptchaToken(token)
       setFormData(prev => ({ ...prev, captchaToken: token }));
     }
 
