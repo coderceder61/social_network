@@ -1,32 +1,35 @@
 import React,{useState} from 'react'
 import './NewPass.css'
 import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useSearchParams } from "react-router-dom";
 
 function Home() {
+  const token = searchParams.get("token");
+  const [searchParams] = useSearchParams();
   const [good1,setGood1] = useState(false)
-  const [pass,setPass] = useState('')
+  const [pass,setPass] = useState('')  
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
   const handleChange = (e)=>{
     setPass(e.target.value)
   }
-  const location = useLocation();
   const handleSubmit = async (e)=>{
     e.preventDefault();
-    setGood1(false)
     if(pass==''){
       setGood1(true)
     }else{
       try {
-        const response = await axios.post('https://soc-net.info/api/updatePass.php',{
-          email: location.state.response,
-          password: pass// Example data to send
+       const res = await fetch("https://yourbackend.com/update_password.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ token, password })
         });
+        const data = await res.json();
+        setMessage(data.status === "success" ? "Password updated!" : data.message);
         // console.log('Form data sent successfully:', response.data);
         
-        navigate('/');
         }
         catch (error) {
           console.error('Error sending form data:', error);
@@ -42,6 +45,7 @@ function Home() {
             <input autocomplete="off" value={pass} onChange={handleChange} style={{width:'90%',margin:'10px 20px'}} type="password" placeholder='new password' name='code'/><br/>
             {good1 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>enter your new password</span>}
             <div style={{margin:'10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between'}}><input autocomplete="off" style={{padding:'5px 10px',backgroundColor:'#0b5ed7',color:'white',borderRadius:'5px'}} type="submit" value="Change Password" name="sign"/></div>
+  {message && <p>{message}</p>}
             <Link to='/' style={{margin:'10px 20px'}} href=""><i style={{marginRight:'5px'}} className="fa-solid fa-circle-arrow-left"></i>Go Back To Login</Link>
         </form>
     </div>
