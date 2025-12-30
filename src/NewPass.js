@@ -19,10 +19,12 @@ function Home() {
   }
   const handleSubmit = async (e)=>{
     e.preventDefault();
+    setGood3(true)
     if(pass===''){
       setGood1(true)
+    setGood3(false)
     }else{
-      setGood3(true)
+      
       try {
        const res = await fetch("https://soc-net.info/api/update_password.php", {
           method: "POST",
