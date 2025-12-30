@@ -54,7 +54,7 @@ function Home() {
   {message && <p style={{    background:data.status==="error"? '#ff9090':'#5ded5d',
     margin: '10px 20px',
     color: 'white',
-    borderRadius: '5px';
+    borderRadius: '5px',
     padding: '10px',
     width: 'fit-content',
     display: 'flex',
