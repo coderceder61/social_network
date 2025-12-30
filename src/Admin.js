@@ -120,18 +120,7 @@ const handleVerify = async (e,email) => {
         </div>
       </header>
     <div className="app-wrapper">
-      <aside className="app-sidebar">
-        <div className="sidebar-brand">
-          soc-net
-        </div>
-        <nav className="sidebar-nav">
-          <ul>
-            <li className="nav-item active">
-              <a href="#">Dashboard</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
+     
 
       <main className="app-main">
         <div className="app-content">
