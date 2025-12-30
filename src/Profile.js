@@ -207,7 +207,7 @@ const getUserDataak = async (username) => {
         } catch (error) {
           console.error("Polling error:", error);
         }
-      }, 10000);
+      }, 2000);
     } catch (error) {
       console.error('Initial fetch error:', error);
     }
@@ -1092,7 +1092,7 @@ const getUserDataak = async (username) => {
     } catch (error) {
       console.error('Error fetching new messages:', error);
     }
-  }, 10000);
+  }, 2000);
 
   // Cleanup interval on unmount or if res changes
   return () => clearInterval(intervalId);
@@ -1724,7 +1724,7 @@ upsd.current.style.display='none'
         };
   
         // Set an interval to keep fetching new messages
-        checkNewMessages2 = setInterval(fetch, 10000);
+        checkNewMessages2 = setInterval(fetch, 2000);
         return () => {
           clearInterval(checkNewMessages2); // Cleanup the interval on component unmount or dependency change
         };
