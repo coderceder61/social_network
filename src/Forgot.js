@@ -14,7 +14,6 @@ function Home() {
     const navigate = useNavigate();
    const handleCaptchaChange = (token) => {
         setCaptchaToken(token)
-      setFormData(prev => ({ ...prev, captchaToken: token }));
     }
     const handleSubmit = async (e) => {
         setGood3(false)
@@ -32,6 +31,7 @@ function Home() {
           try {
             const response = await axios.post('https://soc-net.info/api/auth2.php',{
               email: email,  // Example data to send
+                captchaToken:captchaToken,
             });
               setGood4(false)
             setGood3(true)
