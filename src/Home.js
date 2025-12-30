@@ -109,7 +109,7 @@ function Home() {
               {good2 && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>password is not given</span>}
               {gaga && <span style={{margin:'10px 20px',display:'inline-block',color:'rgb(177, 7, 72)',border:'1px solid rgb(203, 184, 190)',padding:'15px 10px',backgroundColor:'#f8d7da',width:'90%'}}>something is incorrect, we can't find you</span>}
                 <ReCAPTCHA
-                  sitekey="6LeDWzssAAAAALUf7bsXlzyIP0ipgVhWvAIxP-ny"
+                  sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                   onChange={handleCaptchaChange}
                   onExpired={() => setCaptchaToken(null)}
                 />
