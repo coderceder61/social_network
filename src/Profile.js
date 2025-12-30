@@ -1987,7 +1987,6 @@ upsd.current.style.display='none'
 <div id="dio" style={{margin:'0px 10px 0px 20px',display:'flex',alignItems:'center'}}>
       <input autocomplete="off" checked={formData.gender === 'male'} onChange={handleChange6} disabled style={{marginRight:'10px'}} type="radio" id="male" value='male' name="gender"/><label style={{marginRight:'10px'}} htmlFor='male'>Male</label>
             <input autocomplete="off" checked={formData.gender === 'female'} onChange={handleChange6} disabled style={{marginRight:'10px'}} type="radio" id="female" value='female' name="gender"/><label htmlFor='female' style={{marginRight:'10px'}}>Female</label>
-            <input autocomplete="off" checked={formData.gender === 'other'} onChange={handleChange6} disabled type="radio" id="other" value='other' name="gender" style={{marginRight:'10px'}}/><label htmlFor='other' style={{marginRight:'10px'}}>Other</label>
             </div>
             <input autocomplete="off" value={formData.e_mail} disabled onChange={handleChange3} placeholder='email' style={{margin:'0px 10px 0px 20px',height:'50px',width:'90%'}} type="email" name="e_mail"/>
             <input autocomplete="off" value={formData.username} onChange={handleChange4} placeholder='username' style={{margin:'15px 10px 0px 20px',height:'50px',width:'90%'}} type="text" name="username"/>
