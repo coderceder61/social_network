@@ -68,7 +68,7 @@ function Home() {
         try {
           // Send formData to PHP backend
           const response = await axios.post('https://soc-net.info/api/auth.php', formData);
-          console.log('Form data sent successfully:', response.data);
+          console.log(response.data);
           if(response.data.response1 && response.data.response1.success===2){
               localStorage.setItem('isAdmin', "admin");
               navigate('/admin');
